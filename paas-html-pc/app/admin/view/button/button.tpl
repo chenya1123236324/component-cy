@@ -1,6 +1,3 @@
-<!--后台设置布局-->
-<!--首页菜单-->
-<!--右侧内容-->
 <div class="page-main-content">
     <div class="admin-organization-layout-list">
         <div class="organization-layout-list-right">
