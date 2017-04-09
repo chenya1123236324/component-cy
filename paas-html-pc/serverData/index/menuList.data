@@ -1,0 +1,22 @@
+[
+        {
+            name:'列表主页面',
+            href:'demo/list/index'
+        },
+        {
+            name:'grid列表',
+            href:'demo/list/grid'
+        },
+        {
+            name:'日期组件',
+            href:'demo/form/date'
+        },
+        {
+            name:'表单布局',
+            href:'demo/form/layout'
+        },
+        {
+            name:'下拉菜单',
+            href:'demo/menu/drop'
+        }
+    ]

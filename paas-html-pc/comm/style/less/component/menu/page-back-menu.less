@@ -1,0 +1,138 @@
+body{
+  overflow: auto;
+}
+//后台设置菜单栏
+ul.back-stage-menu{
+    width: 100%;
+    li{
+      cursor: pointer;
+      position: relative;
+      width:100%;
+      line-height: 35px;
+
+      &:hover{
+        background: #5278C7;
+      }
+      a{
+        display: inline-block;
+        width:100%;
+        text-indent: 48px;
+        color:white;
+        &:before{
+          content:'';
+          display: none;
+          position: absolute;
+          left:0;
+          top:0;
+          border-left: 2px solid #5087FA;
+          border-right: 2px solid #5087FA;
+          border-top: 17.5px solid #5087FA;
+          border-bottom: 17.5px solid #5087FA;
+        }
+      }
+
+
+      div{
+        line-height: 48px;
+        padding:0px 14px 0px 24px;
+        position: relative;
+        vertical-align: middle;
+        >i{
+          margin-right: 8px;
+        }
+        .arrow-right{
+          position: absolute;
+          right: 0;
+          >i{
+            position: absolute;
+            right:5px;
+            color: gray;
+          }
+        }
+      }
+
+      li:hover{
+        a:before{
+          display: inline-block;
+        }
+      }
+    }
+
+  //用户权限配置及其他配置模块的图标颜色
+  .icon-quanxianshezhi{
+    color:#D88A12;
+  }
+  .icon-company-info{
+    color: #4FBC93;
+  }
+  .icon-iconfontxitongshezhi{
+    color: #CB66EA;
+  }
+  .icon-xiaoxishezhi{
+    color: #EE7730;
+  }
+  .icon-setting{
+    color: #00A79D;
+  }
+  .icon-yidongduan{
+    color: #B7B35A;
+  }
+  .icon-5_2xitongrizhi{
+    color: #E08788;
+  }
+
+  //菜单栏第一层特殊设置
+  &.back-stage-menu1{
+    //display: block;
+    //height:0;
+    //-webkit-transform: scale(1,1);
+    color: white;
+    background-color: transparent;
+    >li{
+      //padding:10px 0px;
+      border-bottom:1px solid #3A4356;
+
+      &:hover{
+        background: #212838;
+      }
+
+      //每一块设置最后面的展开箭头
+      .icon-right{
+        display: none;
+      }
+    }
+
+  }
+
+  //div点击事件 li的样式
+  .li-click{
+
+    >ul.back-stage-menu{
+      display: none;
+      //-webkit-transform: scale(1,1);
+    }
+    >div{
+      >.arrow-right{
+        >.icon-down{
+          display: none;
+        }
+        >.icon-right{
+          display: inline-block;
+        }
+      }
+    }
+  }
+  .li-focus{
+    background: #212838;
+  }
+
+  //最内层li点击事件的样式(class=inside-li-click)
+  .inside-li-click {
+    background: #5278C7;
+    > a:before {
+      display: inline-block;
+    }
+  }
+
+  }
+

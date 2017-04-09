@@ -1,0 +1,324 @@
+/**
+ * Created by pyh on 2016/10/8.
+ */
+//右侧tab导航
+.tab-right-nav {
+  display: inline-block;
+
+  ul {
+      position: relative;
+      border-left: 2px solid #ccc;
+      padding: 20px 0;
+      margin: 50px;
+
+      &:after,&:before {
+        content: '';
+        display: block;
+        border: 1px solid #999;
+        width: 11px;
+        height: 11px;
+        background: #fff;
+        position: absolute;
+        left: -8px;
+      }
+      &:after{
+        top: -1px;
+        border-radius: 50%;
+      }
+      &:before {
+        bottom: -1px;
+      }
+
+      li {
+        list-style: none;
+        cursor: pointer;
+        position: relative;
+        margin: 13px 0 13px 22px;
+
+        &:before {
+          content: '';
+          display: block;
+          border: 1px solid #999;
+          width: 11px;
+          height: 11px;
+          border-radius: 50%;
+          position: absolute;
+          left: -30px;
+          top: 9px;
+          background: #fff;
+        }
+        &:after {
+          content: '';
+          display: block;
+          width: 0;
+          height: 0;
+          border-width: 8px;
+          position: absolute;
+          left: -14px;
+          top: 7px;
+          border-color: transparent #ccc transparent transparent;
+          border-style: dashed solid dashed dashed;
+        }
+
+        span {
+          padding: 8px 14px;
+          background: #ccc;
+          color: #fff;
+          display: inline-block;
+          border-radius: 5px;
+          position: relative;
+        }
+      }
+
+      li.active {
+        span {
+          background: #00A79D
+        }
+
+        &:before {
+          background: #00A79D;
+          border: 1px solid #00A79D;
+        }
+        &:after {
+          border-color: transparent #00A79D transparent transparent;
+        }
+      }
+    }
+
+}
+
+
+//左侧tab导航
+.tab-left-nav{
+  width:240px;
+  height:100%;
+  display: inline-block;
+  ul {
+    width:100%;
+    height:100%;
+    position: relative;
+    padding: 8px 0;
+    background-color: transparent;
+
+    li {
+      list-style: none;
+      position: relative;
+      padding:10px 0px;
+      text-indent: 20px;
+
+      &:after {
+        content: '';
+        display: inline-block;
+        width: 4px;
+        height: 100%;
+        position: absolute;
+        right:0;
+        top: 0;
+        background-color: transparent;
+      }
+
+      &:hover{
+        background-color:#CDD6EA;
+        .dic-btn{
+          display: inline;
+        }
+      }
+
+      .dic-btn{
+        position: absolute;
+        right:20px;
+        display: none;
+        i{
+          margin-left: 10px;
+          cursor: pointer;
+        }
+      }
+
+    }
+
+    li.active {
+      background-color:#CDD6EA;
+      &:after {
+        background: #6899FE;
+      }
+      .dic-btn{
+        display: inline;
+      }
+    }
+  }
+}
+
+//用于测试的
+.tab-left-container{
+  @height:100%;
+  width:500px;
+  height:@height;
+  position: relative;
+  right:0;
+  top:20px;
+  display: flex;
+
+  .tab-left-nav{
+    flex: 1;
+  }
+
+  //情景一、切换页面
+  //右边页面区域
+  .tab-left-pages-window{
+    flex: 2;
+    height:100%;
+    position: relative;
+    background-color: white;
+    overflow: hidden;
+    display: inline-block;
+
+    //包含页面的大div
+    .tab-left-pages-container {
+      width: 100%;
+      height: 10000px;
+      position: relative;
+      left:0;
+      top:0;
+      -webkit-transition: all 1s;
+
+      //页面
+      .tab-left-page {
+        //opacity: 0;
+        width: 100%;
+        height: @height;
+        //position: absolute;
+        //right: 0;
+        //top: 0;
+        text-align: center;
+
+        > span {
+          font-size: 50px;
+        }
+
+        //从上往下显示
+        @-webkit-keyframes upToDownShow {
+          from {
+            top: -100%;
+            opacity: 0;
+          }
+          to {
+            top: 0;
+            opacity: 1;
+          }
+        }
+
+        //从下往上显示
+        @-webkit-keyframes downToUpShow {
+          from {
+            top: 100%;
+            opacity: 0;
+          }
+          to {
+            top: 0;
+            opacity: 1;
+          }
+        }
+
+        //从上往下隐藏
+        @-webkit-keyframes upToDownHide {
+          from {
+            top: 0;
+            opacity: 1;
+          }
+          to {
+            top: 100%;
+            opacity: 0;
+          }
+        }
+
+        //从下往上隐藏
+        @-webkit-keyframes downToUpHide {
+          from {
+            top: 0;
+            opacity: 1;
+          }
+          to {
+            top: -100%;
+            opacity: 0;
+          }
+        }
+
+        //当前显示的页
+        &.show {
+          -webkit-animation: upToDownShow 1s linear 0s forwards;
+        }
+        //当前页的前一页
+        &.showPrevious {
+          //-webkit-animation: downToUpHide 1s linear 0s forwards;
+        }
+        //当前页的后一页
+        &.showAfter {
+          -webkit-animation: upToDownHide 1s linear 0s forwards;
+        }
+      }
+    }
+  }
+
+  //情景二、定位
+  //右边页面
+  .tab-left-page-one{
+    flex: 2;
+    height:100%;
+    position: relative;
+    background-color: greenyellow;
+    overflow: auto;
+
+    .tab-left-pages-container{
+      width:100%;
+      position: relative;
+      left:0;
+      top:0;
+
+      .tab-page-content{
+        width:100%;
+      }
+    }
+  }
+
+}
+
+//顶部tab导航(字段-视图-操作)
+.tab-top-nav{
+  display: inline-block;
+  background-color: white;
+  ul{
+    li{
+      cursor: pointer;
+      display: inline-block;
+      padding:10px 0px;
+      font-weight:bold;
+      span{
+        display: inline-block;
+        padding:0px 28px;
+        border-right:1px solid lightgray;
+      }
+
+      &:nth-last-child(1){
+        span{
+          border-right:none;
+        }
+      }
+
+      &:hover{
+        background-color: #CDD6EA;
+      }
+
+      //li被选中的状态
+      &.active{
+        color: white;
+        background-color: #5378C8;
+        span{
+          border-color: #5378C8;
+        }
+      }
+    }
+  }
+
+
+
+}

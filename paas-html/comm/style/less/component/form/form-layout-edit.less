@@ -1,0 +1,48 @@
+.form-layout-edit{
+  .textNoSelect();
+  background-color: white;
+  >ul {
+    > li {
+      border:solid 1px transparent;
+      &:hover{
+        background: #f3f7fb;
+        border: dashed 1px #7ab3ff;
+        >ul.actions{
+          display: flex;
+        }
+      }
+      &.hidden{
+        display: flex;
+        >ins,>strong{
+          opacity: 0.2;
+        }
+      }
+      &.drag-move{
+        background-color: #f3fff2;
+        border: #cad5fb dashed 1px;
+      }
+      ins{
+        pointer-events:none;
+        -moz-user-select:none;
+        -webkit-user-select:none;
+        user-select:none;
+      }
+      >ul{
+        flex: 1;
+        display: none;
+        padding-right: 5px;
+        justify-content:flex-end;
+
+        li{
+          display: flex;
+          padding:0 8px;
+          align-items:center;
+          cursor: pointer;
+          i{
+            font-size: 18px;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,43 @@
+body{
+  /*font-family: "微软雅黑";
+  font-size: 14px;
+  line-height: 1.42857143;
+  color: #333;*/
+}
+
+//消息中心列表组件
+.news-center-ul{
+  -moz-box-flex: 1;
+  background-color: white;
+  padding-left: 10px;
+  >li{
+    border:1px solid lightgrey;
+    margin-top: 24px;
+    text-indent: 2em;
+    //height:30px;
+    >div{
+      >i{
+        color: red;
+      }
+    }
+  }
+  //li的消息标题样式(p)
+  .list-title{
+    padding:16px 20px 16px 0px;
+  }
+  //li的消息内容样式(div)
+  .list-content{
+     border-top: 1px dotted lightgrey;
+     border-bottom: 1px dotted lightgrey;
+     padding:16px 20px 0px 0px;
+    height:150px;
+     overflow: hidden;
+   }
+  //li的消息时间&已读删除按钮样式(div)
+  .list-time{
+    padding:16px 24px 16px 0px;
+    >i{
+      color: gray;
+    }
+  }
+}

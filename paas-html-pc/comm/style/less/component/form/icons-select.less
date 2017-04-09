@@ -1,0 +1,35 @@
+//图标选择弹框
+.icons-container{
+    width:100%;
+    //width:640px;
+    overflow: auto;
+    position: relative;
+    padding:20px 25px;
+    font-weight: lighter;
+    color: #666;
+
+    //图标行
+    .icons-row{
+        width:100%;
+        padding:10px 0;
+        display: flex;
+        >li{
+            flex:1;
+            text-align: center;
+            span{
+                display: inline-block;
+                border-radius: 10px;
+                cursor: pointer;
+                padding:8px 12px;
+                &:hover{
+                    background-color: #86DEDC;
+                }
+                >i{
+                    font-size: 36px;
+                }
+            }
+
+        }
+    }
+
+}

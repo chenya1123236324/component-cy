@@ -1,0 +1,78 @@
+//模糊查询样式
+
+
+.fuzzy-query{
+  display: inline-block;
+  //position: relative;
+  z-index: 200;
+  >.fuzzy-query-group{
+    @group-height: 32px;
+    //margin-left: 300px;//-----------------测试使用
+    height:@group-height;
+    //width: 240px; //-----------------需要用js控制更改
+    display:inline-flex;
+    flex-direction: column;
+    background-color: #ffffff;
+    border:1px solid #e0e6ef;
+    .fuzzy-query-input{
+      @input-height:30px;
+      width: 100%;
+      height: @input-height;
+      line-height:@input-height;
+      padding:0 8px;
+      border:1px solid #ffffff;
+    }
+    //文本框
+    >input[type=text]{
+      &:focus{
+        border-color:#ffffff;
+      }
+    }
+    //图标样式
+    >.fuzzy-query-icon{
+      height:@group-height;
+      line-height:@group-height;
+      width:30px;
+      padding-left:4px;
+    }
+    &:active {
+      border:1px solid #0c8620;
+    }
+    >.fuzzy-query-list{
+      width: 100%;
+      margin-top:1px;
+      background:#ffffff;
+      position: relative;
+      z-index: 888;
+      //border:1px solid #e0e6ef;
+      >.select-list{
+        //height:240px;
+        max-height:240px;
+        overflow-y: auto;
+        width: 100%;
+        >ul{
+          //border:1px solid red;
+          li{
+            height:30px;
+            line-height: 25px;
+            list-style: none;
+            margin: 0;
+            padding: 5px 6px;
+            //border:1px solid red;
+
+            overflow: hidden;
+            cursor:pointer;
+            >span{
+              font-size:16px;
+            }
+            &:hover{
+              background:#e5ebf4;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+

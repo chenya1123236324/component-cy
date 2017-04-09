@@ -1,0 +1,214 @@
+/* --- Basics --- */
+
+.loading-spinners {
+  display: inline-block;
+  overflow: hidden;
+  height: 1.3em;
+  margin-top: -0.3em;
+  line-height: 1.5em;
+  vertical-align: text-bottom;
+}
+
+.loading-spinners::after {
+  display: inline-table;
+  white-space: pre;
+  text-align: left;
+}
+
+/* --- Types --- */
+
+/* default loading is ellip */
+.loading-spinners::after {
+  content: "\A.\A..\A...";
+  animation: loading-spin4 2s steps(4) infinite;
+}
+
+.loading-spinners.line::after {
+  content: "/\A–\A\\\A|";
+  text-align: center;
+  animation: loading-spin4 1s steps(4) infinite;
+}
+
+.loading-spinners.line2::after {
+  content: "╲\A│\A╱\A─";
+  text-align: center;
+  animation: loading-spin4 1s steps(4) infinite;
+}
+
+.loading-spinners.plus::after {
+  content: "┽\A╀\A┾\A╁";
+  animation: loading-spin4 1s steps(4) infinite;
+}
+
+.loading-spinners.dots::after {
+  content: "⠋\A⠙\A⠹\A⠸\A⠼\A⠴\A⠦\A⠧\A⠇\A⠏";
+  animation: loading-spin10 1s steps(10) infinite;
+}
+
+.loading-spinners.dots2::after {
+  content: "⠋\A⠙\A⠚\A⠞\A⠖\A⠦\A⠴\A⠲\A⠳";
+  animation: loading-spin9 1s steps(9) infinite;
+}
+
+.loading-spinners.dots3::after {
+  content: "⋮\A⋰\A⋯\A⋱";
+  text-align: center;
+  animation: loading-spin4 1s steps(4) infinite;
+}
+
+.loading-spinners.lifting::after {
+  content: "꜈꜍\A꜉꜎\A꜊꜏\A꜋꜐\A꜌꜑";
+  animation: loading-spin5 .5s steps(5) infinite alternate;
+}
+
+.loading-spinners.hamburger::after {
+  content: "☱\A☲\A☴";
+  animation: loading-spin3 .3s steps(3) infinite alternate;
+}
+
+.loading-spinners.bar::after {
+  content: "▏\A▎\A▍\A▌\A▋\A▊\A▉";
+  animation: loading-spin7 1s steps(7) infinite alternate;
+}
+
+.loading-spinners.bar2::after {
+  content: "▁\A▂\A▃\A▄\A▅\A▆\A▇\A█";
+  animation: loading-spin8 2s steps(8) infinite alternate;
+}
+
+.loading-spinners.circle::after {
+  content: "◴\A◷\A◶\A◵";
+  animation: loading-spin4 1s steps(4) infinite;
+}
+
+.loading-spinners.open-circle::after {
+  content: "◜\A◠\A◝\A◞\A◡\A◟";
+  animation: loading-spin6 .6s steps(6) infinite;
+}
+
+.loading-spinners.arrow::after {
+  content: "←\A↖\A↑\A↗\A→\A↘\A↓\A↙";
+  animation: loading-spin8 1s steps(8) infinite;
+}
+
+.loading-spinners.triangle::after {
+  content: "◢\A◣\A◤\A◥";
+  animation: loading-spin4 1s steps(4) infinite;
+}
+
+.loading-spinners.triangles::after {
+  content: "▹▹▹▹▹\A ▸▹▹▹▹\A ▹▸▹▹▹\A ▹▹▸▹▹\A ▹▹▹▸▹\A ▹▹▹▹▸";
+  animation: loading-spin6 1s steps(6) infinite;
+}
+
+.loading-spinners.beam::after {
+  content: "\A=   \A ==  \A === \A ====\A  ===\A   ==\A    =\A";
+  animation: loading-spin9 1.2s steps(9) infinite;
+  font-family: monospace;
+}
+
+.loading-spinners.bullet::after {
+  content: " ●    \A   ●   \A    ●  \A     ● \A      ●\A     ● \A    ●  \A   ●   \A  ●    \A ●     ";
+  animation: loading-spin10 1s steps(10) infinite;
+}
+
+.loading-spinners.bullseye::after {
+  content: "◎◎◎\A◉◎◎\A◎◉◎\A◎◎◉";
+  animation: loading-spin4 1s steps(4) infinite;
+}
+
+.loading-spinners.rhomb::after {
+  content: "◇◇◇\A◈◇◇\A◇◈◇\A◇◇◈";
+  animation: loading-spin4 1s steps(4) infinite;
+}
+
+.loading-spinners.fish::after {
+  content: ">))'>\A  >))'>\A   >))'>\A    >))'>\A     >))'>\A     <'((<\A    <'((<\A   <'((<\A  <'((<\A <'((<\A";
+  animation: loading-spin10 5s steps(10) infinite;
+}
+
+.loading-spinners.toggle::after {
+  content: "⊶\A⊷";
+  animation: loading-spin2 1s steps(2) infinite;
+}
+
+.loading-spinners.countdown::after {
+  content: "0\A 1\A 2\A 3\A 4\A 5\A 6\A 7\A 8\A 9";
+  animation: loading-spin10 10s steps(10) reverse;
+}
+
+.loading-spinners.time::after {
+  content: "🕐\A🕑\A🕒\A🕓\A🕔\A🕕\A🕖\A🕗\A🕘\A🕙\A🕚\A🕛";
+  animation: loading-spin12 3s steps(12) infinite;
+  width: 1.3em;
+}
+
+.loading-spinners.hearts::after {
+  content: "💛\A💙\A💜\A💚";
+  animation: loading-spin4 2s steps(4) infinite;
+  width: 1.3em;
+}
+
+.loading-spinners.earth::after {
+  content: "🌍\A🌎\A🌏";
+  animation: loading-spin3 1s steps(3) infinite;
+  width: 1.3em;
+}
+
+.loading-spinners.moon::after {
+  content: "🌑\A🌒\A🌓\A🌔\A🌕\A🌖\A🌗\A🌘";
+  animation: loading-spin8 2s steps(8) infinite;
+  width: 1.3em;
+}
+
+.loading-spinners.monkey::after {
+  content: "🙈\A🙉\A🙊";
+  animation: loading-spin3 1.5s steps(3) infinite;
+  width: 1.3em;
+}
+
+.loading-spinners.runner::after {
+  content: "🚶\A🏃";
+  animation: loading-spin2 1s steps(2) infinite;
+  width: 1.3em;
+}
+
+.loading-spinners.box-bounce::after {
+  content:"▖\A▘\A▝\A▗";
+  animation: loading-spin4 1s steps(4) infinite;
+}
+
+.loading-spinners.star::after {
+  content:"✶\A✸\A✹\A✺\A✹\A✷";
+  animation: loading-spin6 1s steps(6) infinite;
+}
+
+.loading-spinners.matrix::after {
+  content:"░ ░░░░\A░░ ░░░\A░░░ ░░\A░░░░ ░";
+  animation: loading-spin4 .5s steps(4) infinite alternate;
+}
+
+.loading-spinners.square::after {
+  content: "◰\A◳\A◲\A◱";
+  animation: loading-spin4 1s steps(4) infinite;
+}
+
+.loading-spinners.words::after {
+  content: "Loading\A Still loading\A Mostly done\A A bit more \A Almost done\A Ready-ish";
+  animation: loading-spin6 12s steps(6) infinite;
+}
+
+/* --- Animations --- */
+
+@keyframes loading-spin1  { to { transform: translateY( -1.5em); } }
+@keyframes loading-spin2  { to { transform: translateY( -3.0em); } }
+@keyframes loading-spin3  { to { transform: translateY( -4.5em); } }
+@keyframes loading-spin4  { to { transform: translateY( -6.0em); } }
+@keyframes loading-spin5  { to { transform: translateY( -7.5em); } }
+@keyframes loading-spin6  { to { transform: translateY( -9.0em); } }
+@keyframes loading-spin7  { to { transform: translateY(-10.5em); } }
+@keyframes loading-spin8  { to { transform: translateY(-12.0em); } }
+@keyframes loading-spin9  { to { transform: translateY(-13.5em); } }
+@keyframes loading-spin10 { to { transform: translateY(-15.0em); } }
+@keyframes loading-spin11 { to { transform: translateY(-16.5em); } }
+@keyframes loading-spin12 { to { transform: translateY(-18.0em); } }

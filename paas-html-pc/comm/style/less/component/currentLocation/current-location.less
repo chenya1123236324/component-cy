@@ -1,0 +1,165 @@
+
+/*当前位置样式*/
+.currentLocation{
+  //--------鼠标点击过快出现蓝色解决方案------
+  -moz-user-select: none; /*火狐*/
+  -webkit-user-select: none; /*webkit浏览器*/
+  -ms-user-select: none; /*IE10*/
+  -khtml-user-select: none; /*早期浏览器*/
+  user-select: none;
+  //--------鼠标点击过快出现蓝色解决方案------
+  position: absolute;
+  z-index: 1;
+  @main-height:60px;
+  height: @main-height;
+  transition: 1s ease 0s;
+
+  //当前位置左侧内容
+  >.locationLeft {
+    font-family: '微软雅黑';
+    font-size: 20px;
+    position: relative;
+    z-index: 1;
+    float: left;
+    height: @main-height;
+    cursor: pointer;
+    .verticalLine{
+      width:1px;
+      height: 36px;
+      background: #DFE2E6;
+      margin-left:9px;
+      vertical-align: middle;
+      display:inline-block;
+      position: relative;
+      bottom: 2px;
+    }
+    >span {
+      >#currentLocationName{
+        margin-left:12px;
+      }
+      > a{
+        //width:68%;
+        height: @main-height;
+        color: #394457;
+        line-height: @main-height;
+        margin-left: 20px;
+      }
+    }
+    >.arrow-icon{
+      margin-left: 18px;
+      font-size: 19px;
+      color:#9CA3AD;
+    }
+    >.superior-icon{
+      margin-left:6px;
+      font-size: 19px;
+      color:#A7B6D0;;
+    }
+
+    >i{
+      color:#ffffff;
+      display: inline-block;
+      cursor: pointer;
+    }
+  }
+  //当前位置右侧内容
+  .locationRight {
+    font-family: '微软雅黑'!important;
+    font-size: 20px;
+    float:left;
+    height: @main-height;
+    opacity: 0;
+    width:1000px;
+    //background:#698cd8;
+    //具体导航
+    .locationFloat{
+      float:left;
+      height: @main-height;
+      width:140px;
+      cursor: pointer;
+      >span{
+        float:left;
+        display: inline-block;
+        line-height: 24px;
+        margin: 17px 0;
+        //border-right:1px solid #5abfb9;
+        //&:hover,
+        //&:focus,
+        //&:active{
+        //  //border-right:1px solid #567ed2;
+        //}
+        > p{
+          text-align: center;
+          color: #2F3748;
+          width:140px;
+          height:20px;
+          line-height:24px;
+          display: inline-block;
+          font-size: 16px;
+
+        }
+      }
+
+      //鼠标滑过样式改变
+      //&:hover,
+      //&:focus,
+      //&:active{
+      //  //background:#21c3b9;
+      //}
+    }
+    //最后一个没有竖线
+    .locationFloat:last-child{
+      >span{
+        border-right:none!important;
+      }
+    }
+  }
+
+
+
+  //css3动画
+  //向左运动
+  .slidingToLeft {
+    -webkit-animation: slidingToLeft 1s ease 0s  forwards;
+    display:none;
+  }
+
+
+
+  @-webkit-keyframes slidingToLeft {
+    0% {
+      opacity: 1;
+      -webkit-transform: translateX(0px);
+      transform: translateX(0px);
+    }
+
+    100% {
+      opacity: 0;
+      -webkit-transform: translateX(-1500px);
+      transform: translateX(-1500px);
+    }
+  }
+
+  //向右运动
+  .slidingToRight{
+    -webkit-animation: slidingToRight 1.2s ease 0s  forwards;
+  }
+
+
+  @-webkit-keyframes slidingToRight {
+    0% {
+      opacity: 0;
+      -webkit-transform: translateX(-1500px);
+      transform: translateX(-1500px)
+    }
+
+    100% {
+      opacity: 1;
+      -webkit-transform: translateX(0px);
+      transform: translateX(0px)
+    }
+  }
+}
+
+
+

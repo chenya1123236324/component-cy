@@ -1,0 +1,231 @@
+body{
+  //margin:0;
+  //padding:0;
+}
+//组织架构最外层
+.ztree-container{
+  width:240px;
+  //width:280px;
+  height:100%;
+  display: inline-block;
+  background-color: white;
+  border:1px solid lightgray;
+  position: relative;
+  //上面的字和按钮
+  .ztree-top{
+    padding:0px 8px;
+    >div{
+      display: inline-block;
+      width:48%;
+      >span{
+        font-size: 16px;
+      }
+    }
+    >div:nth-child(1){
+      >i{
+        font-weight:100;
+      }
+      font-weight:bold;
+      padding:15px 0px;
+    }
+    >div:nth-child(2){
+      padding:14px 0px;
+      text-align: right;
+    }
+    .btn-group{
+      >button{
+        cursor: pointer;
+        margin-right: 16px;
+        background-color: transparent;
+        border:none;
+        color: gray;
+      }
+    }
+  }
+
+  //搜索栏
+  .ztree-mid{
+    padding:5px 10px;
+    border-top: 1px solid lightgray;
+    border-bottom:1px solid lightgray;
+    >i{
+      color: lightgray;
+    }
+    >input{
+      border:none;
+      margin-left: 10px;
+    }
+  }
+
+  //组织架构树
+  .ztree-bottom{
+    height:850px;
+    overflow: auto;
+  }
+  .ztree{
+    padding:1em .9em;
+    li{
+      >span{
+        cursor: pointer;
+      }
+      >input[type=checkbox]{
+        height:1em;
+        width:1em;
+        &:after{
+          font-size: 1em;
+        }
+      }
+    }
+    ul{
+      margin-left:8px;
+      //display: none;
+      li{
+        //width:100px;
+        margin-top: 1px;
+        border-left: 1px dotted lightgray;
+      }
+      //没有下一个兄弟节点的li的样式
+      .li-noBorder{
+        margin-left:1px;
+        border-left: none;
+      }
+    }
+    button{
+      cursor: pointer;
+      background-color: transparent;
+      border:none;
+      color: gray;
+      font-size: .9em;
+      margin-left: 5px;
+      vertical-align: middle;
+    }
+    input{
+      vertical-align: middle;
+    }
+
+    a{
+      display: inline-block;
+      vertical-align: middle;
+      color: black;
+      -webkit-user-select: none;
+      cursor: pointer;
+      &:hover{
+        background-color: #D5DCF0;
+        text-decoration: underline;
+      }
+    }
+    span{
+      vertical-align: middle;
+      margin-left: -1px;
+      display: inline-block;
+    }
+    //==================展开- ============================================================
+    //后面没有兄弟节点的展开状态----最上面的一层(-...)
+    .switch1_open_nb{
+      background: url('zTreeStandard.png') no-repeat -96px -59px;
+      width: 13px;
+      height: 9px;
+      margin-left: -5px;
+    }
+
+    //后面没有兄弟节点的展开状态(-...上面有点)
+    .switch_open_nb{
+      background: url('zTreeStandard.png') no-repeat -96px -33px;
+      width: 13px;
+      height: 17px;
+      vertical-align: top;
+      margin-left: -5px;
+
+    }
+
+    //后面有兄弟节点的展开状态(-...上下都有点)
+    //.switch_open_b{
+    //  background: url('zTreeStandard.png') no-repeat -96px -15px;
+    //  width: 13px;
+    //  height: 25px;
+    //  margin-left: -5px;
+    //}
+
+
+    //=======================收起+ ============================================================================
+
+    //后面没有节点的收起状态-----最上面一层(+...)
+    .switch1_close_nb{
+      background: url('zTreeStandard.png') no-repeat -78px -59px;
+      width: 13px;
+      height: 9px;
+      margin-left: -5px;
+    }
+
+    //后面没有兄弟节点的收起状态(+...上面有点)
+    .switch_close_nb{
+      background: url('zTreeStandard.png') no-repeat -78px -33px;
+      width: 13px;
+      height: 17px;
+      vertical-align: top;
+      margin-left: -5px;
+    }
+
+    //后面有兄弟节点的收起状态(+...上下都有点)
+    //.switch_close_b{
+    //  background: url('zTreeStandard.png') no-repeat -78px -15px;
+    //  width: 13px;
+    //  height: 25px;
+    //  margin-left: -5px;
+    //}
+
+
+    //===========点点 ===============================================================
+    //最后一个单独项的点(上右)
+    .dot_last{
+      background: url('zTreeStandard.png') no-repeat -64px -31px;
+      width: 9px;
+      height: 22px;
+    }
+
+    //中间项的点(上下右)
+    .dot_mid{
+      background: url('zTreeStandard.png') no-repeat -64px -11px;
+      width: 9px;
+      height: 33px;
+    }
+
+
+
+
+
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}

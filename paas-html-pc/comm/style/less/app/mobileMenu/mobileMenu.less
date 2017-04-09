@@ -1,0 +1,41 @@
+//移动端菜单列表样式
+.admin-mobileMenu-layout-list {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  //移动端菜单-右侧-上部分
+  > .mobileMenu-list-settings {
+    width: 100%;
+    height: 60px;
+    background: #FCFDFF;
+    border-bottom: #DFE2E6;
+    display: flex;
+    justify-content: space-between;
+    > .mobileMenu-list-settings-left {
+      > .mobileMenu-list-content {
+        height:60px;
+        line-height:60px;
+        margin-left:20px;
+        >span:nth-child(1){
+          font-size:18px;
+          font-weight:bold;
+        }
+        >span:nth-child(2){
+          font-size:12px;
+          display:inline-block;
+          margin-left:4px;
+          padding:4px;
+          height: 20px;
+          line-height:14px;
+          border-radius:4px;
+          background:#FB9B00;
+        }
+      }
+    }
+  }
+  //移动端菜单-右侧-下部分
+  > .mobileMenu-list-grid {
+    padding: 20px;
+    width: 100%;
+  }
+}

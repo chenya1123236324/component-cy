@@ -1,0 +1,83 @@
+/**
+ * Created by xiyuan on 16-10-8.
+ */
+
+menuMaster(function ($app, $appConfig) {
+
+
+    /**
+     * 菜单组件解析渲染
+     * @param data
+     */
+    function renderMenu(data){
+        //文档片段(用于存储元素)
+        var masterMenu=document.createElement('ul');
+
+        //检查
+        if(data instanceof Array){
+            data.forEach(function (menuData) {
+                masterMenu.appendChild(createMenu(menuData));
+            })
+        }
+
+        return masterMenu;
+    }
+
+    /**
+     * 创建菜单元素
+     * @param menuData
+     */
+    function createMenu(menuData) {
+        var menuElement=document.createElement('li'),
+            menuContainer=document.createElement('div'),
+            labelElement=document.createElement('span');
+
+        menuElement.appendChild(menuContainer);
+        menuContainer.className='menu-container';
+
+        //检查是否有图标
+        if(menuData.icon){
+            menuContainer.innerHTML='<i class="iconfont icon-'+menuData.icon+'"></i>'
+        }
+
+        if(menuData.label){
+            labelElement.innerHTML=menuData.label;
+            menuContainer.appendChild(labelElement);
+        }
+
+        //检查是否是菜单组
+        if(menuData.isGroup){
+            menuContainer.appendChild(renderMenu(menuData.list))
+        }
+
+        return menuElement;
+    }
+
+
+    //input组件注册
+    $app.componentRegister('menuMaster', {
+        //指令优先级 降序执行
+        priority: 0,
+        //引入的工具类
+        tools: [],
+        //只调用一次，在指令第一次绑定到元素上时调用。
+        handle: function () {
+
+            //组件原有的标签
+            var oldElement=this.$element;
+
+            //监听获取属性中的数据
+            this.watchAttrData('data',function (data) {
+                var newMenu=document.createElement('div');
+                newMenu.className="menu-master";
+
+                newMenu.appendChild(renderMenu(data));
+                //元素替换
+                oldElement.parentNode.replaceChild(newMenu,oldElement);
+            })
+
+
+        }
+    })
+
+});

@@ -1,0 +1,30 @@
+.input-del{
+  height: 0;
+  width: 0;
+  display: inline-block;
+  position: relative;
+  &.on{
+    span{
+      display: block;
+    }
+  }
+  span{
+    top: -2.5rem;
+    left: -3.5rem;
+    display: none;
+    padding: 1rem;
+    position: absolute;
+    &:before{
+      content:'×';
+      width: 2rem;
+      height: 2rem;
+      color: white;
+      display: block;
+      cursor: pointer;
+      font-size: 2rem;
+      line-height: 2rem;
+      border-radius: 2rem;
+      background: rgba(90, 90, 90, 0.89);
+    }
+  }
+}

@@ -1,0 +1,179 @@
+//该页面最外层div
+.news-container{
+  height:100%;
+  display: -webkit-box;
+}
+
+//消息中心顶部nav
+.news-center-nav{
+  position: fixed;
+  left:0;
+  top:0;
+  width:100%;
+  padding:14px 16px 14px 216px;
+  background-color: lightgray;
+  opacity:0.6;
+  //font-size: 30px;
+  //line-height: 60px;
+  -webkit-box-align: center;
+
+  >ul{
+    display: inline-block;
+    >input{
+      display: inline-block;
+      height:30px;
+    }
+    .text-icon{
+      display: inline-block;
+      padding:5px;
+      color: white;
+      font-size: 8px;
+      border-radius: 4px;
+      background-color: orange;
+      margin-left: 10px;
+    }
+  }
+  .news-center-nav-left{
+
+  }
+  .news-center-nav-right{
+    position: absolute;
+    right:20px;
+  }
+}
+
+
+//消息中心左侧菜单
+.news-center-menu{
+  width:200px;
+  height:100%;
+  background-color: #EAEDF2;
+  //padding-top:60px;
+  >.news-menu-nav{
+    padding:14px 16px;
+    font-size: 18px;
+    >i{
+      font-size: 20px;
+      vertical-align: middle;
+    }
+  }
+  //消息栏
+  >.news-menu-top{
+    padding:14px 16px;
+    &:hover{
+      background-color: #CFD7EC;
+    }
+    >i{
+      position: relative;
+      display: inline-block;
+    }
+  }
+  //消息通知div
+  >.news-menu-down{
+    position: relative;
+    -webkit-transform-origin:50% 0;
+
+    //-webkit-transform: scale(1,0);
+
+    -webkit-transition: all .4s;
+
+    div{
+      height:42px;
+      line-height:42px;
+      padding-left:35px;
+    }
+
+  }
+  //消息通知下的ul
+  .back-stage-menu{
+    >li{
+      >div{
+        -webkit-transition:all .4s;
+        &:hover{
+          -webkit-transform: scale(1.2,1.1);
+        }
+
+      }
+    }
+    //-webkit-transform-origin:50% 0;
+    //
+    //-webkit-transform: scale(1,0);
+    //
+    //-webkit-transition: all .4s;
+  }
+
+  //消息通知数量
+  .news-number,.notice-number{
+    position: absolute;
+    top:14px;
+    left:130px;
+  }
+  .notice-number{
+    top:58px;
+  }
+}
+
+//消息列表外层div
+//消息中心右侧详情
+.news-center-right{
+  -webkit-box-flex: 1;
+  background-color: white;
+  height:100%;
+  padding:78px 16px 32px;
+    >button{
+      cursor: pointer;
+      background-color: white;
+      border:none;
+      border:1px solid lightgray;
+      padding:5px 16px;
+    }
+  //消息详情
+  .news-details{
+    margin-top: 20px;
+    height:94%;
+    border:1px solid lightgray;
+    //text-indent: 2rem;
+    //标题
+    .news-title{
+      padding:16px 0px;
+      border-bottom: 1px solid lightgray;
+      >p{
+        text-align: center;
+        line-height: 24px;
+      }
+    }
+    //内容
+    .news-content{
+      padding:1.4em;
+      line-height: .9em;
+      font-size: 28px;
+      >p{
+        //line-height: 1.8em;
+      }
+      .news-content-txt{
+        margin:2em 0em;
+      }
+      .news-content-txt-title{
+        font-weight: bold;
+
+      }
+    }
+  }
+}
+
+
+//点击消息,显示隐藏消息通知
+.msg-click{
+  background-color: #CFD7EC;
+  >i {
+    -webkit-transform: rotate(90deg);
+  }
+}
+.ul-menu-show{
+  >.back-stage-menu1{
+    -webkit-transform: scale(1, 1);
+  }
+}
+
+
+

@@ -1,0 +1,102 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<head>
+    <title>点击按钮弹出一个淡入淡出的提示框，且自动消失</title>
+</head>
+<body>
+    <table width=80% ID="Table1">
+        <tr>
+            <td>预览效果：淡入淡出的弹出消息<br>
+                <input type=button onclick="startObjMessage('objDiv')" value="点击弹出消息" ID="Button1" NAME="Button1">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <DIV id="objDiv" style="DISPLAY: none; Z-INDEX: 1; POSITION: absolute; ">
+                    测试效果
+                </DIV>
+            </td>
+        </tr>
+    </table>
+
+<SCRIPT>
+    var intTimeStep=20;
+    var intAlphaStep=0.05;
+    var //获取提示框元素
+            function startObjMessage(objId)
+    {
+        curSObj=document.getElementById(objId);
+        setMessage();
+    }
+    //设置透明度和display:none
+    function setMessage() {
+        curOpacity=0;
+        curSObj.style.opacity=0;
+        curSObj.style.display='';
+        setMessageShow();
+    }
+    //透明度加加,赋值给透明度; 当透明度小于1时,设置定时器
+    function setMessageShow() {
+        curOpacity+=intAlphaStep;
+        curSObj.style.opacity =curOpacity;
+        if (curOpacity<1) {
+            //当透明度<1 , 每过intTimeStep时间执行一次该方法(透明度渐增)
+            setTimeout('setMessageShow()',intTimeStep);
+        } else{
+            //当透明度>=1 ,
+            stopTime+=10;
+            if(stopTime<200){
+                setTimeout('setMessageShow()',intTimeStep);
+            }else{
+                stopTime=0;
+                setMessageClose();
+            }
+        }
+
+    }
+    function setMessageClose() {
+        curOpacity-=intAlphaStep;
+        if (curOpacity>0) {
+            curSObj.style.opacity =curOpacity;
+            setTimeout('setMessageClose()',intTimeStep);
+        }
+        else {
+            curSObj.style.display='none';
+        }
+
+    } curSObj=null;//提示框
+    var curOpacity=null;//透明度
+    var stopTime=0;
+
+
+
+
+
+//    function setMessageShow(){
+//        var timer = null;
+//        timer = setInterval(function(){
+//            curOpacity+=intAlphaStep;
+//            if(curOpacity>=1){
+////                setTimeout(function(){
+//                   intAlphaStep*=-1;
+////                },100);
+//            }else if(curOpacity<=0){
+//                intAlphaStep*=-1;
+//                curSObj.style.display = 'none';
+//                clearInterval(timer);
+//            }
+//            curSObj.style.opacity = curOpacity;
+//
+//
+//        },intTimeStep);
+//
+//    }
+
+
+
+
+
+</SCRIPT>
+
+</body>
+</html>

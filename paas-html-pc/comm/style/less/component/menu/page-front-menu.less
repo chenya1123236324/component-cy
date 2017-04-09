@@ -1,0 +1,201 @@
+@dropMenuWidth:148px;
+@dropMenuHeight:220px;
+#top-nav{
+   color:#fff;
+  width:100%;
+  height: 44px;
+  position: relative;
+  background-color: #2F3748;
+}
+@menu-size:12px;
+.top-nav-left{
+  height: 100%;
+  vertical-align: middle;
+  .CRM-TOPBAR{
+    padding-left: 30px;
+    padding-right: 54px;
+    font-family: microsoft;
+    font-size: 20px;
+    margin: 0 auto;
+  }
+  >li{
+    padding-left: 10px;
+  }
+  .icon-index-copy{
+    padding-right: 15px;
+  }
+/*  .icon-index-copy,.icon-menu{
+    &:after{
+      content:'';
+      display: block;
+      height: 18px;
+      //padding-left: 5px;
+      border-right:solid 1px #444F65;
+    }
+  }*/
+  //下拉菜单实现
+  .icon-menu{
+    position: relative;
+  }
+  .drop-menu{
+    height: 444px;
+    width: 600px;
+    //background-color: red;
+    position: absolute;
+    top: 44px;
+    left: 142px;
+    border: 1px solid #CCCED2;
+    border-top: none;
+    i{
+      color: red;
+    }
+    .dropMenu-box{
+      float: left;
+      width:@dropMenuWidth ;
+      height: @dropMenuHeight;
+      padding: 5px;
+      .drop-title{
+        color: #9C9C9C;
+      }
+      .icon-gong{
+        color: #B14241;
+      }
+      .icon-lianxiren{
+        color: #50AA00;
+      }
+      .icon-qukong{
+        color:#D88A12;
+      }
+      .icon-qian2{
+        color:#DB7BA9;
+      }
+      .icon-kaohechengji{
+       color: #CB66EA;
+      }
+
+      span{
+        font-family: microsoft;
+        color: #333333;
+        display:inline-block;
+        padding-top: 7px;
+        padding-bottom: 7px;
+        font-size: 14px;
+        padding-left: 5px;
+        //padding-top:5px;
+      }
+    }
+    //下拉菜单分割线实现
+    .detailUl{
+      >li{
+        margin-left: 18px;
+      }
+      //float: left;
+
+      &:after{
+        content:'';
+        display: block;
+        height: 100%;
+        border-bottom:solid 1px #F9F9F9;
+      }
+
+    }
+
+
+  }
+}
+
+.top-nav-right{
+  height: 100%;
+  right:0;
+  top:0;
+  position: absolute;
+  vertical-align:middle;
+  .icon-shezhi{
+    //display:block;
+    padding-right: 6px;
+  }
+  //用户头像
+  .clientLi{
+    position:relative;
+    padding-left: 20px;
+    margin-left: 18px;
+  }
+  .client-icon{
+    background-color: #fff;
+    height: 30px;
+    width: 30px;
+    margin-right: 5px;
+    position: absolute;
+    border-radius: 15px;
+    top:7px;
+    left:-17px;
+  }
+//信息数量外面的框
+   .info-amount{
+     margin-left: 5px;
+    background-color: #FB9B00;
+    height: 12px;
+    width: 12px;
+     border-radius:5px;
+     //信息数量里面的数字
+     span{
+       text-align: center;
+       display:block;
+       height: 12px;
+       line-height: 12px;
+       font-family: microsoft;
+       font-size: 5px;
+     }
+
+  }
+}
+
+.navRightUl,.navLeftUl{
+  height:100%;
+  .box-display(box);
+  li{
+    height:100%;
+    font-size: @menu-size;
+    padding: 13px 8px;
+    padding-right:13px;
+    display: flex;
+    .box-display(box);
+    .box-pack(center);
+    &:not(:last-child){
+      &:after{
+        content:'';
+        display: block;
+        height: 100%;
+        padding-left: 15px;
+        border-right:solid 1px #444F65;
+      }
+    }
+  }
+}
+
+
+.nav-left-container{
+  height: 100%;
+  vertical-align: middle;
+  .box-display(box);
+  >li{
+    height: 100%;
+    font-size: @menu-size;
+    vertical-align: middle;
+    text-align: center;
+    .box-display(box);
+    .box-pack(center);
+    min-width: 44px;
+    &:not(:first-child){
+      &:after{
+        content:'';
+        display: block;
+        height: 18px;
+        //padding-left: 5px;
+        margin-left: 10px;
+        border-right:solid 1px #444F65;
+      }
+    }
+
+  }
+}

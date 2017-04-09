@@ -1,0 +1,83 @@
+.form-edit{
+  height:100%;
+  display: flex;
+  overflow: hidden;
+  position: relative;
+  flex-direction: row;
+  .edit-field{
+    width:240px;
+    height: 100%;
+    overflow: auto;
+    background-color: #F6F8FA;
+    border-bottom: 1px solid #DFE2E6;
+    @border-color:#DFE2E6;
+    dt{
+      color:#556584;
+      height: 35px;
+      display: flex;
+      align-items: center;
+      padding-left: 10px;
+      background-color: #dee9f3;
+      border-bottom: solid 1px #d2d2d2;
+    }
+    dd{
+      margin: 0;
+    }
+    ul{
+      display: flex;
+      flex-wrap: wrap;
+      background-color: #f5f6f7;
+      border-bottom:solid 1px @border-color;
+    }
+    li{
+      width:50%;
+      height:35px;
+      display: flex;
+      align-items:center;
+      padding-left: 10px;
+      font-size: 13px;
+      border-bottom: 1px solid @border-color;
+      border-right:solid 1px @border-color;
+      color: #313A4D;
+      &.drag{
+        opacity: 0.8;
+        border:1px solid #82A9D1;
+        background-color: #E9EFFB;
+      }
+      &:nth-child(1),&:nth-child(2){
+        border-top: none;
+      }
+      &:last-child:nth-child(odd){
+        border-right:solid 1px @border-color;
+      }
+      &:nth-last-child(2):nth-child(even){
+        border-bottom:solid 1px @border-color;
+      }
+    }
+  }
+  .edit-form{
+    flex: 1;
+    overflow: auto;
+    padding: 10px 15px;
+    background-color: #EEF1F5;
+    border: 1px solid #DFE2E6;
+    >div{
+      padding-bottom: 30px;
+    }
+    h3{
+      color: #7d818c;
+      padding-left: 10px;
+      height: 35px;
+      line-height: 35px;
+      font-size: 14px;
+      font-weight: 100;
+      background: #fcfdff;
+      border-bottom: solid 1px #f1f1f1;
+    }
+    .form-layout{
+      padding: 10px 0;
+      background-color: white;
+      box-shadow: 1px 1px 1px #e0e0e0;
+    }
+  }
+}

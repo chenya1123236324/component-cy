@@ -1,0 +1,124 @@
+.form-batch{
+  overflow-y: hidden;
+  overflow-x: auto;
+  width: 100%;
+  //表格右侧内容X轴滚动条默认底色颜色
+  &::-webkit-scrollbar-track{
+    background-color: #e4e8ea;
+    border-radius: 10px;
+  }
+  //表格右侧内容X轴滚动条鼠标初始化颜色
+  &::-webkit-scrollbar-thumb{
+    background-color: rgba(160, 162, 161, 0.9);
+    border-radius: 10px;
+  }
+  //表格右侧内容X轴滚动条鼠标划过颜色
+  &::-webkit-scrollbar-thumb:hover {
+    background-color: rgba(162, 160, 158, 0.79);
+    border-radius: 10px;
+  }
+  //表格右侧内容X轴滚动条鼠标点击颜色
+  &::-webkit-scrollbar-thumb:active {
+    background-color: rgba(84, 86, 87, 0.76);
+    border-radius: 10px;
+  }
+  //表格右侧内容X轴滚动条高度
+  &::-webkit-scrollbar{
+    height:10px;
+  }
+  .batch-footer{
+    ul{
+      display: flex;
+      justify-content:flex-end;
+    }
+    li{
+      padding: 5px;
+    }
+    a{
+      color: white;
+      display: block;
+      cursor: pointer;
+      font-size: 14px;
+      padding: 5px 15px;
+      &.add{
+        background-color: #00ac9d;
+      }
+      &.remove{
+        background-color: #f34444;
+      }
+    }
+  }
+  input.input-date {
+    background-size: auto 60%;
+  }
+}
+
+.form-batch-main{
+  display: table;
+  width: 100%;
+  >div{
+    >ul{
+      height: 35px;
+      display: table-row;
+      >li{
+        height: 35px;
+        color: #7d7d7d;
+        font-size: 14px;
+        line-height: 34px;
+        text-align: center;
+        display: table-cell;
+        overflow: hidden;
+        border-bottom: solid 1px  #f3f3f3;//#e6e6e6;
+
+        white-space: nowrap;
+        position: relative;
+        padding: 0px 12px;
+        text-overflow: ellipsis;
+        vertical-align: middle;
+      }
+    }
+  }
+  .batch-head{
+    display: table-header-group;
+    >ul{
+      >li{
+        background: #f9f9f9;
+        &:last-child{
+          width:120px;
+        }
+      }
+    }
+  }
+  .batch-body{
+    display: table-row-group;
+    input:not([type="radio"]),input:not([type="checkbox"]),textarea{
+      border:0;
+      width: 100%;
+      height: 100%;
+      text-align: center;
+      .placeholder(#d3d3dc,12px,0,0,center);
+      &:focus{
+        text-align: left;
+        .placeholder(#d3d3dc,12px,15px,0,center);
+      }
+      &.err{
+        border-bottom: solid 1px red;
+      }
+    }
+    textarea{
+      padding-top: 5px;
+    }
+    >ul{
+      >li:last-child{
+        a{
+          cursor: pointer;
+          font-size: 14px;
+          &.remove{
+            color: #f30707;
+          }
+        }
+      }
+    }
+  }
+
+}

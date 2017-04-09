@@ -1,0 +1,99 @@
+body{
+  background:#EEF1F5;
+}
+///dashboard组件
+.dashboard-content{
+  //@dashboard-height:320px; //dashboard组件的高---用户可以自定义
+  display:flex;
+  justify-content:flex-start;
+  flex-wrap:wrap;
+  margin:0px 10px;
+  >.dashboard-ibox{
+    >.dashboard-ibox-content{
+      //height:@dashboard-height;//---用户可以自定义
+      background-color:#ffffff;
+      //margin:8px; //---用户可以自定义
+      border-radius:4px;
+      box-sizing:border-box;
+      //头部标题
+      >.ibox-title{
+        @ibox-title-height:60px;
+        width:100%;
+        height:@ibox-title-height;
+        border-bottom:1px solid #e6e6e6;
+        display: flex;
+        justify-content:space-between;
+        //名称
+        >.ibox-name{
+          height:@ibox-title-height;
+          line-height:@ibox-title-height;
+          margin-left:10px;
+          //标题文字
+          >span:nth-child(2){
+            margin-left:6px;
+            font-size:16px;
+          }
+          //箭头
+          >span:nth-child(3){
+            > a{
+              color:#505050;
+            }
+          }
+        }
+        //工具
+        >.ibox-tools{
+          height:@ibox-title-height;
+          line-height:@ibox-title-height;
+          margin-right:10px;
+          cursor:pointer;
+        }
+      }
+
+      //内容区
+      >.ibox-content{
+        width:100%;
+        overflow-y:auto;
+        //滚动条样式
+        .ibox-content();
+        >.ibox-content-data{
+          //height:220px; //---------后期需要用js动态计算
+          margin:20px;
+          //border:1px solid red;
+        }
+      }
+    }
+  }
+
+  //++++++++公共部分样式++++++++
+
+  //滚动条样式
+  .ibox-content(){
+    //表格右侧内容X轴滚动条默认底色颜色
+    &::-webkit-scrollbar-track{
+      background-color:#bee1eb;
+      border-radius: 10px;
+    }
+    //表格右侧内容X轴滚动条鼠标初始化颜色
+    &::-webkit-scrollbar-thumb{
+      background-color:#D88A12;
+      border-radius: 10px;
+    }
+    //表格右侧内容X轴滚动条鼠标划过颜色
+    &::-webkit-scrollbar-thumb:hover {
+      background-color:#9c3;
+      border-radius: 10px;
+    }
+    //表格右侧内容X轴滚动条鼠标点击颜色
+    &::-webkit-scrollbar-thumb:active {
+      background-color:#00aff0;
+      border-radius: 10px;
+    }
+    //表格右侧内容X轴滚动条高度
+    &::-webkit-scrollbar{
+      height:10px;
+      width:10px;
+    }
+  }
+
+  //++++++++公共部分样式++++++++
+}

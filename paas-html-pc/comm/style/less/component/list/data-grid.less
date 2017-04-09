@@ -1,0 +1,390 @@
+//dataGrid最外层盒子
+.grid-container{
+  margin-left:5px;//后期可以去掉
+
+  //++++++++公共部分样式++++++++
+  //阴影样式
+  .box-shadow(){
+    -moz-box-shadow: 3px 3px 1px #cbced1; /* 老的 Firefox */
+    box-shadow: 3px 3px 1px #cbced1;
+  }
+  //dataGrid左,右边盒子公共部分样式
+  .grid-table-left-right(){
+    display:table;
+    //操作图标样式
+    .icon-fenlei{
+      color: #c0cada;
+    }
+  }
+
+  //dataGrid表格头部
+  .grid-header-group() {
+    width: 100%;
+    display: table-header-group;
+    -moz-user-select: none;
+    /*火狐*/
+    -webkit-user-select: none;
+    /*webkit浏览器*/
+    -ms-user-select: none;
+    /*IE10*/
+    -khtml-user-select: none;
+    /*早期浏览器*/
+    user-select: none;
+    //dataGrid头部样式中的ul
+    >ul.grid-header-row {
+      padding: 0;
+      margin: 0;
+      width: 100%;
+      position: relative;
+      overflow: hidden;
+      display: table-row;
+      background-color: #ffffff;
+      //dataGrid头部样式中的ul下的li
+      >li {
+        @li-height: 39px;
+        padding:0px 12px;
+        overflow: hidden;
+        height: @li-height;
+        white-space: nowrap;
+        display: table-cell;
+        position: relative;
+        text-overflow: ellipsis;
+        vertical-align: middle;
+        border-bottom: 1px solid #e5ebf4;
+        font-family: "Microsoft YaHei";
+        font-size: 14px;
+       //排序图标颜色
+       // 升序
+        @sort-asc: #AAAFB2;
+        //降序
+        @sort-desc:#567ED2;
+          span {
+               height:30px;
+               vertical-align: middle;
+               //弹性布局
+               display:inline-flex;
+               //让两个三角图标垂直排列
+               flex-direction:column;
+              >.iconfont{
+                font-size:12px !important;
+                cursor:pointer;
+              }
+             //升序排列
+              .icon-down-copy-asc {
+                display:inline-flex;
+                margin-top:2px;
+                &::before{
+                  height:10px;
+                  color: @sort-asc;
+                }
+              }
+              //降序排列
+              .icon-down-copy-desc {
+                display:inline-flex;
+                &::before{
+                   height:10px;
+                   color: @sort-desc;
+                 }
+              }
+          }
+      }
+    }
+  }
+
+  //dataGrid表格中间内容
+  .grid-row-group() {
+    width: 100%;
+    display: table-row-group;
+    >ul.grid-body-row {
+      padding: 0;
+      margin: 0;
+      width: 100%;
+      position: relative;
+      overflow: hidden;
+      display: table-row;
+      font-size: 14px;
+      cursor: pointer;
+      background: #f6f8fa;
+      &:nth-child(even){
+        background: #ffffff;
+      }
+      >li{
+        vertical-align: middle;
+        text-align: center;
+        display: table-cell;
+        border-bottom: 1px solid #e5ebf4;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        padding: 0px 12px;
+        height:42px;
+        position:relative; /*这个是关键*/
+        z-index:2;
+        &:hover{
+          z-index:3;
+          background:none; /*没有这个在IE中不可用*/
+        }
+        //操作面板
+        >ul{
+          display: none;
+        }
+        //鼠标经过时操作面板的样式
+        &:hover ul{ /*span 标签仅在 :hover 状态时显示*/
+          display:block;
+          position:absolute;
+          top:21px;
+          left:20px;
+          z-index:3;
+          width:100px;
+          border:1px solid #dddddd;
+          background-color:#fcfdff;
+          padding: 10px 0;
+          color:#3a4153;
+          -moz-box-shadow: 3px 3px 1px #cbced1; /* 老的 Firefox */
+          box-shadow: 3px 3px 1px #cbced1;
+          >li{
+            text-align: left;
+            padding-left:24px;
+            height:24px;
+            line-height:24px;
+            >a{
+              color:#363e4f;
+            }
+            &:hover{
+              background:#5278c7;
+            }
+          }
+        }
+      }
+
+      //鼠标选中
+      &:hover {
+        background-color: #dee5f2;
+      }
+      //鼠标经过
+      &:focus {
+        background-color: #dee5f2;
+      }
+      //鼠标选中
+      &.hover {
+        background-color: #dee5f2;
+      }
+    }
+  }
+
+  //右边盒子滚动条
+  .right-wrap-scroll-bar(){
+    //表格右侧内容X轴滚动条默认底色颜色
+    &::-webkit-scrollbar-track{
+      background-color:#bee1eb;
+      border-radius: 10px;
+    }
+    //表格右侧内容X轴滚动条鼠标初始化颜色
+    &::-webkit-scrollbar-thumb{
+      background-color:red;
+      border-radius: 10px;
+    }
+    //表格右侧内容X轴滚动条鼠标划过颜色
+    &::-webkit-scrollbar-thumb:hover {
+      background-color:#9c3;
+      border-radius: 10px;
+    }
+    //表格右侧内容X轴滚动条鼠标点击颜色
+    &::-webkit-scrollbar-thumb:active {
+      background-color:#00aff0;
+      border-radius: 10px;
+    }
+    //表格右侧内容X轴滚动条高度
+    &::-webkit-scrollbar{
+      height:10px;
+    }
+  }
+
+  //++++++++公共部分样式++++++++
+
+  //阴影样式
+  .box-shadow();
+  width: 99%;  //---------表格宽度，用户可修改
+  background-color: #ffffff;
+  border-top: 2px solid #e5ebf4;
+  //表格样式
+  >.grid-table {
+    width: 100%;
+    display:flex;//弹性盒子
+    //dataGrid左边盒子样式
+    >.grid-table-left-wrap{
+      .grid-table-left{
+        //dataGrid左,右边盒子公共部分样式
+        .grid-table-left-right();
+        //dataGrid表格头部
+        >.grid-header-group{
+          .grid-header-group();
+        }
+        //dataGrid表格中间内容
+        >.grid-row-group{
+          .grid-row-group();
+        }
+      }
+    }
+
+
+
+    //dataGrid右边盒子样式
+    >.grid-table-right-wrap{
+      overflow-y:hidden;
+      overflow-x:auto;
+      width:100%;
+      .grid-table-right{
+        //dataGrid左,右边盒子公共部分样式
+        .grid-table-left-right();
+        width:100%;
+        //dataGrid表格头部
+        >.grid-header-group{
+          .grid-header-group();
+        }
+        //dataGrid表格中间内容
+        >.grid-row-group{
+          .grid-row-group();
+        }
+      }
+       //右边盒子滚动条
+      .right-wrap-scroll-bar();
+    }
+  }
+
+  //表格底部样式
+  >.grid-footer {
+    width: 100%;
+    display: table;
+    padding-top: 30px;
+    background: #eef1f5;
+    padding-bottom: 20px;
+    >ul {
+      display: flex;
+      justify-content: space-between;
+      font-size: 14px;
+      >li {
+        input {
+          width: 30px;
+          height: 22px;
+          padding: 0;
+          text-align: center;
+        }
+        //左边
+        &.page-paging-container {
+          display: flex;
+          //border:1px solid red;
+          //分页
+          .pagelist {
+            width: 100%;
+            height: 36px;
+            ul {
+              display:flex;
+              li {
+                height: 30px;
+                line-height: 30px;
+                margin: 0px 1px;
+                color:#bcc8dc;
+                min-width: 40px;
+                text-align: center;
+                &:nth-child(1) {
+                  width: 50px;
+                  height: 30px;
+                  border-radius: 10px;
+                  margin-right: 12px;
+                }
+                &:nth-child(2) {
+                  border-radius: 10px 0 0 10px;
+                }
+                &:nth-child(10) {
+                  border-radius: 0 10px 10px 0;
+                }
+                &:last-child {
+                  width: 50px;
+                  height: 30px;
+                  border-radius: 10px;
+                  margin-left: 12px;
+                }
+                a{
+                  display: block;
+                  padding: 0px 6px;
+                  background: #ffffff;
+                  color:#bcc8dc;
+                }
+              }
+            }
+            //选中页
+            .current {
+              background: #26b7ae;
+              display: block;
+              padding: 0px 6px;
+              color:#000000;
+            }
+          }
+        }
+        //中间
+        &.page-info-container {
+          //border:1px solid blue;
+          padding: 0 30px;
+          color:#bcc8dc;
+          text-align: center;
+          button{
+            margin-bottom: 6px;
+            margin-left: 20px;
+          }
+          //总页数
+          .pageCount{
+            color:#000000;
+            padding: 0 4px;
+          }
+           //第几页
+          .targetPage{
+            width:50px;
+            height:30px
+          }
+          //按钮样式
+          .buttonStyle{
+            width: 66px;
+            height:30px;
+            display: inline-block;
+            background:#26b7ae;
+            color: #ffffff;
+            line-height: 30px;
+            border-radius: 4px;
+            text-align: center;
+            cursor:pointer;
+          }
+        }
+        //右面
+        &.page-select-container {
+          text-align: right;
+          padding-right: 40px;
+          width:30%;
+          color:#bcc8dc;
+          //总条数
+          .dataCount{
+            color:#000000;
+            padding: 0 4px;
+          }
+          //按钮样式
+          .pageButton{
+            width: 66px;
+            height:30px;
+            display: inline-block;
+            background:#ffffff;
+            color: #bfcbdd;
+            line-height: 30px;
+            border-radius: 4px;
+            text-align: center;
+            cursor:pointer;
+            &.hover{
+              background:#26b7ae;
+              color: #000000;
+            }
+          }
+        }
+      }
+    }
+  }
+
+
+}

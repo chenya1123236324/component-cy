@@ -1,0 +1,73 @@
+{
+        scope:{
+
+        },
+        filter:{
+
+        },
+        list:[
+            {
+                title:'文本框{{value}}',
+                require:true,
+                config:{
+                    type:'text',
+                    value:'text 1',
+                    name:'text-name',
+                    placeholder:'请输入文本',
+                    //需要给元素添加的指令
+                    cmd:{
+                        "$-bind:name":'',
+                        "$-value":'',
+                        "$-model":'value'
+                    }
+                },
+                //当前行需要添加的指令
+                cmd:{
+                    "$-if":true
+                },
+                //当前行的作用域
+                scope:{
+                    value:''
+                },
+                //当前行的过滤器
+                filter:{
+
+                }
+            },
+            {
+                title:'日期组件',
+                require:true,
+                config:{
+                    type:'date',
+                    value:'text 2',
+                    placeholder:'请选择日期',
+                    cmd:{
+                        $value:'',
+                        $model:''
+                    }
+                },
+                hidden:true
+            },
+            {
+                title:'时间选项',
+                require:true,
+                config:{
+                    type:'time',
+                    value:'text 3',
+                    placeholder:'请选择时间',
+                    cmd:{
+                        "$-value":'',
+                        "$-model":''
+                    }
+                }
+            },
+            {
+                title:'自定义内容',
+                require:true,
+                config:{
+                    type:'custom',
+                    template:'自定义内容<input type="datetime"><input type="checkbox"> '
+                }
+            }
+        ]
+    }

@@ -1,0 +1,133 @@
+
+//查询条件组件最外层
+.query-criteria{
+  //查询条件组件
+  >.queryCriteria{
+    padding: 20px 20px;
+    //查询条件
+    >.queryCondition{
+      width: 90%;
+      margin: 4% 5%;
+      height:30px;
+      line-height: 30px;
+      font-weight: 500;
+      //查询条件左边横线
+      >.queryConditionLeft{
+        display: inline-block;
+        font-size: 16px;
+      }
+      //查询条件右边横线
+      .queryConditionRight{
+        display: inline-block;
+        height:1px;
+        line-height:1px;
+        width:82%;
+        background:#c0cada;
+        overflow:hidden;
+        margin-left:6px;
+        vertical-align: middle;
+      }
+    }
+    //查询表单
+    >.queryForm{
+      width: 90%;
+      margin: 2% 5% 5px 5%;
+      height:40px;
+      line-height: 40px;
+      > span{
+        color:#4c5462;
+        font-size:14px;
+        font-weight:500;
+      }
+      //查询条件标签
+      .tagQueryCondition{
+        margin-left:10px;
+      }
+      //搜索表单公共样式
+      .searchFormCommon(){
+        color:#778899;
+        //border-radius:4px;
+        border:1px solid #e8eef5;
+        margin:0 10px 0 10px;
+      }
+      //下拉框样式
+      .form-select{
+        //搜索表单公共样式
+        .searchFormCommon;
+      }
+      .form-select .select-input .select-content {
+        overflow: inherit !important;
+      }
+      //文本框
+      .searchText{
+        //搜索表单公共样式
+        color:#778899;
+        border:1px solid #e8eef5;
+        width: 120px;
+        height:32px;
+        line-height: 32px;
+        background:#ffffff;
+      }
+      //标签名称
+      .tagName{
+        //搜索表单公共样式
+        .searchFormCommon;
+        width: 220px;
+        height:32px;
+        background:#ffffff;
+      }
+      //加减图标
+      >.iconfont {
+        font-size: 20px;
+        cursor: pointer;
+        margin: 0 4px;
+        color: #999999;
+      }
+    }
+    //新增查询条件内容
+    >.addQueryConditionBox{
+      >.addSearchNode{
+        width: 90%;
+        margin: 5px 5%;
+        height:40px;
+        line-height: 40px;
+        > span{
+          color:#4c5462;
+          font-size:14px;
+          font-weight:500;
+        }
+        //查询条件标签
+        .tagQueryCondition{
+          margin-left:10px;
+        }
+        //搜索表单公共样式
+        .searchFormCommon(){
+          color:#778899;
+          //border-radius:4px;
+          border:1px solid #e8eef5;
+          margin:0 10px 0 10px;
+        }
+        //下拉框样式
+        .form-select{
+          //搜索表单公共样式
+          .searchFormCommon;
+        }
+        .form-select .select-input .select-content {
+          overflow: inherit !important;
+        }
+        //文本框
+        .searchText{
+          //搜索表单公共样式
+          color:#778899;
+          border:1px solid #e8eef5;
+          width: 120px;
+          height:32px;
+          line-height: 32px;
+          background:#ffffff;
+        }
+      }
+    }
+  }
+}
+
+

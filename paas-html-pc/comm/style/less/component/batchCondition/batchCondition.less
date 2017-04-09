@@ -1,0 +1,67 @@
+.batchConditionContent{
+  //display: flex;
+  //flex-direction:column;
+  //width: 100%;
+  >.batchConditionGroup{
+    display: flex;
+    width: 100%;
+    >.batchConditionBox{
+      display: flex;
+      >.contentField{
+        margin-left:12px;
+        >.require{
+          &:before{
+            color:red;
+            content:'*';
+            padding-right: 2px;
+          }
+        }
+      }
+    }
+    >.contentText{
+      //margin: 8px 12px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-left: 8px;
+      //加减图标
+      >.iconfont {
+        font-size: 20px;
+        cursor: pointer;
+        margin: 0 4px;
+        color: #999999;
+      }
+    }
+  }
+  >.addBatchConditionBox{
+    display: flex;
+    flex-direction:column;
+    width: 100%;
+    >.addBatchCondition{
+      display: flex;
+      width: 100%;
+      margin-top: 2px;
+      >.contentField{
+        margin-left:12px;
+        >.require{
+          &:before{
+            color:red;
+            content:'*';
+            padding-right: 2px;
+          }
+        }
+      }
+      >.iconfont {
+        margin-left:12px;
+        font-size: 20px;
+        cursor: pointer;
+        //margin: 8px 16px;
+        color: #999999;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    }
+  }
+}
+

@@ -1,0 +1,70 @@
+//应用布局样式
+body{
+  font-family: '微软雅黑';
+}
+body{
+  >div.admin-page{
+    display: flex;
+  }
+  >.admin-page{
+    flex-direction: column;
+  }
+}
+.layout-page-container{
+  width:100%;
+  flex:1;
+  position: relative;
+  display: flex;
+  background: #2F3748;
+
+  //左侧菜单
+  .back-menu-container{
+    width:240px;
+    height:1080px;
+    background-color: transparent;
+  }
+
+  //右侧页面container
+  .page-main-content{
+    flex:1;
+    //height:100%;
+    //margin:10px 0 0 10px;
+    background-color: whitesmoke;
+  }
+}
+
+
+@primary_color:#00BEAF;
+@success_color:#4cae4c;
+@info_color:#46b8da;
+@warning_color:#eea236;
+@danger_color:#d43f3a;
+
+.admin-page{
+  .buttons-container{
+    height:40px;
+    width:100%;
+    z-index: 6;
+    display: flex;
+    padding: 5px 15px;
+    justify-content:flex-end;
+    background-color:  #ffffff;
+  }
+  button{
+    color: #31394A;
+    height:30px;
+    padding: 3px 15px;
+    margin-right: 15px;
+    background-color: white;
+    border: 1px solid #E5EBF4;
+    //.transition(opacity 0.3s);
+    &.primary{
+      color:white;
+      border: 1px solid @primary_color;
+      background-color: @primary_color;
+    }
+    &:active{
+      opacity: 0.5;
+    }
+  }
+}

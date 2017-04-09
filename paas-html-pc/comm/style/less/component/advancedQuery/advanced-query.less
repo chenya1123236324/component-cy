@@ -1,0 +1,89 @@
+//高级搜索组件样式
+.advancedQuery {
+  > ul {
+    display: block;
+    width: 100%;
+    margin: 0;
+    position: relative;
+    > li {
+      list-style-type: none;
+      float: left;
+      width: 100px;
+      line-height: 60px;
+      text-align: left;
+      color: #000000;
+      //background: #fcfdff;
+      height: 60px;
+      > .searchTab {
+        border: 1px solid #dfe2e6;
+        width: 90px;
+        text-align: center;
+        line-height: 36px;
+        margin: 11px 0;
+        border-radius: 3px;
+      }
+      &:nth-child(1) {
+        margin-left:25%;
+        >.isShowUL{
+          >.form-layout{
+            li{
+              width:100%!important;
+              ins{
+                max-width:100%!important;
+              }
+            }
+          }
+        }
+      }
+      &:nth-child(2) {
+        width: auto;
+        button{
+          float: left;
+          margin: 11px 0;
+          border-radius: 3px;
+        }
+      }
+      &:nth-child(3) {
+        width: auto;
+        button{
+          float: left;
+          margin: 11px 0;
+        }
+      }
+      &:hover {
+        cursor: pointer;
+      }
+      > ul {
+        display: list-item;
+        margin: 0;
+        position: relative;
+        //z-index: 889;
+        left: -290px;
+        top: -12px;
+        border-radius: 8px;
+        border: 1px solid #dfe2e6;
+        width: 745px;
+        min-height: 150px;
+        background: #ffffff;
+        >.form-layout{
+          ul{
+            li{
+              strong{
+                display:none;
+              }
+            }
+          }
+        }
+      }
+      > .clickTabBefore {
+        display: none;
+      }
+      > .clickTabAfter {
+        display: list-item;
+        position: relative;
+        z-index: 5;
+      }
+    }
+
+  }
+}

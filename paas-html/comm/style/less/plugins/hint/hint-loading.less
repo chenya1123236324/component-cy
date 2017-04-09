@@ -1,0 +1,19 @@
+.hint-loading{
+  top:0;
+  opacity: 0;
+  left: 50%;
+  display: flex;
+  position: fixed;
+  transform: translateX(-50%) translateY(-100%);
+  z-index: 9999;
+  .transition(~'transform 0.3s,opacity 0.3s');
+  background-color:#26B7AE;
+  .message-main{
+    color:white;
+    padding: 8px 15px;
+  }
+  &.open{
+    opacity: 0.8;
+    transform: translateX(-50%) translateY(0);
+  }
+}

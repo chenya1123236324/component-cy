@@ -1,0 +1,132 @@
+//.dialog1{
+//  //dialog遮罩层
+//  >.modal-backdrop{
+//    position: fixed;
+//    top: 0;
+//    right: 0;
+//    bottom: 0;
+//    left: 0;
+//    z-index: 8888;
+//    background-color: #000000;
+//    filter: alpha(opacity=50);
+//    opacity: .5;
+//  }
+//  //dialog暂存区
+//  >.modal-storage{
+//    display: none;
+//  }
+//  //dialog主体内容部分
+//  >.modal {
+//    position: fixed;
+//    top: 50%;
+//    left: 50%;
+//    //width:680px;   //------用户自定义的值
+//    //height: 430px; //------用户自定义的值
+//    z-index: 9999 !important;
+//    -webkit-transform: translateX(-50%) translateY(-50%);
+//    -moz-transform: translateX(-50%) translateY(-50%);
+//    -ms-transform: translateX(-50%) translateY(-50%);
+//    transform: translateX(-50%) translateY(-50%);
+//    border-radius:2px;
+//    background-color:#ffffff;
+//    overflow: hidden;
+//    >.modal-dialog {
+//      z-index: 2500;
+//      //dialog内容分为头部，中间内容，底部
+//      >.modal-content {
+//        background-color: #ffffff;
+//        //dialog头部
+//        >.modal-header{
+//          position: absolute;
+//          top:0;
+//          left:0;
+//          display: flex;
+//          justify-content:space-between;
+//          height: 50px;
+//          width: 100%;
+//          background:#e0e5ed;
+//          border-bottom: 1px solid #c0cada;
+//          //dialog头部标题
+//          >.modal-title{
+//            height:50px;
+//            line-height:50px;
+//            display: inline-block;
+//            padding-left: 22px;
+//            font-size: 16px;
+//            //border:1px solid red;
+//          }
+//          //dialog头部关闭图标
+//          >.modal-close{
+//            height:50px;
+//            line-height:50px;
+//            text-align: center;
+//            cursor: pointer;
+//            margin-right:20px;
+//            display: inline-block;
+//            //border:1px solid blue;
+//            >.space{
+//              margin-right: 16px;
+//            }
+//          }
+//        }
+//        //dialog中间内容
+//        >.modal-body {
+//          position: absolute;
+//          top:50px;
+//          left:0;
+//          width: 100%;
+//          //height: 320px; //------用户自定义的值，这个值得计算方式是总高度-头部高度-底部高度
+//          overflow-y: auto;  //超出用户设定的高度会出现滚动条
+//          overflow-x:hidden;
+//          //border:1px solid #008000;
+//          //dialog中间需要填充的内容
+//          >.modal-body-content{
+//            margin: 20px 20px  40px 20px; //------用户自定义的值 用户可以设置边框值
+//          }
+//        }
+//
+//        //dialog中间内容Y轴滚动条默认底色颜色
+//        //.modal-body::-webkit-scrollbar-track{
+//        //  background-color:#bee1eb;
+//        //  border-radius: 6px;
+//        //}
+//        //dialog中间内容Y轴滚动条鼠标初始化颜色
+//        //.modal-body::-webkit-scrollbar-thumb{
+//        //  background-color:#FB9B00;
+//        //  border-radius: 6px;
+//        //}
+//        //dialog中间内容Y轴滚动条鼠标划过颜色
+//        //.modal-body::-webkit-scrollbar-thumb:hover {
+//        //  background-color:#9c3;
+//        //  border-radius: 6px;
+//        //}
+//        //dialog中间内容Y轴滚动条鼠标点击颜色
+//        //.modal-body::-webkit-scrollbar-thumb:active {
+//        //  background-color:#00aff0;
+//        //  border-radius: 6px;
+//        //}
+//        //dialog中间内容Y轴滚动条宽度
+//        .modal-body::-webkit-scrollbar{
+//          width: 8px;
+//        }
+//
+//        //dialog底部
+//        >.modal-footer {
+//          position: absolute;
+//          bottom:0;
+//          left:0;
+//          height: 60px;
+//          width:100%;
+//          line-height:60px;
+//          border-top:1px solid #c0cada;
+//          //border:1px solid red;
+//        }
+//      }
+//    }
+//  }
+//}
+//
+//
+//
+//
+//

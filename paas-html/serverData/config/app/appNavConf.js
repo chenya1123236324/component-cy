@@ -1,0 +1,104 @@
+/**
+ * Created by xiyuan on 16-12-23.
+ */
+appNavConf({
+    navList:[
+        {
+            type:'custom',
+            template:'<a>ME CRM</a>'
+        },
+        {
+            type:'custom',
+            template:'<div $-app-menu="layoutBaseConf.menuList"><i class="iconfont icon-menu"></i></div>',
+        },
+        {
+            type:'custom',
+            template:'<a $-bind:href="indexHref"><i class="iconfont icon-index-copy"></i></a>',
+            scope:{
+                indexHref:'home/index'
+            }
+        },
+        {
+            type:'menu',
+            content:'客户',
+            href:'',
+            list:[
+                {
+                    content:'公海客户',
+                    href:'',
+                    icon:'gong'
+                },
+                {
+                    content:'联系人',
+                    href:'',
+                    icon:'caidanlianxiren'
+                },
+                {
+                    content:'区域公海',
+                    href:'qukong',
+                    icon:'caidanlianxiren'
+                }
+            ]
+        },
+        {
+            type:'menu',
+            content:'跟进',
+            href:'',
+            list:[
+
+            ]
+        },
+        {
+            type:'menu',
+            content:'宣传资料',
+            href:'',
+            list:[
+                {
+                    content:'报价单',
+                    iocn:'baojiadan'
+                },
+                {
+                    content:'订单',
+                    iocn:'caidan-dingdan'
+                }
+            ]
+        },
+        {
+            type:'menu',
+            content:'市场营销'
+        },
+        {
+            type:'menu',
+            content:'服务资料'
+        },
+        {
+            type:'menu',
+            content:'目标'
+        }
+    ],
+    sysInfoList:[
+        {
+            type:'custom',
+            template:'<a><i class="iconfont icon-xinxi"></i><span>8</span></a>'
+        },
+        {
+            type:'menu',
+            content:'<i class="img" $-parses:style="background-image:url( {{ COMM + imageUrl }} );background-size: 100% 100%;width: 35px;height: 35px;margin-right: 10px;"></i><span>用户中心</span>',
+            scope:{
+                imageUrl:"/img/comm/head.png"
+            },
+            list:[
+                {
+                    content:'修改密码'
+                },
+                {
+                    content:'个人中心'
+                }
+            ]
+        },
+        {
+            type:'custom',
+            template:'<a href="admin/organization/organization"><i class="iconfont icon-shezhi"></i><span>设置</span></a>'
+        }
+    ]
+});

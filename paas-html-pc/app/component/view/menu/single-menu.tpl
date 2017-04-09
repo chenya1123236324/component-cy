@@ -1,0 +1,1 @@
+<single-menu config="singleMenuData"></single-menu>

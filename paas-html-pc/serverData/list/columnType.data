@@ -1,0 +1,65 @@
+{
+  "data": [
+    {
+      "label": "普通输入",
+      "className": "active",
+      "value": "normal"
+    },
+    {
+      "label": "富文本",
+      "className": "",
+      "value": "simditor"
+    },
+    {
+      "label": "日期",
+      "className": "",
+      "value": "date"
+    },
+    {
+      "label": "外键",
+      "className": "",
+      "value": "foreignkey"
+    },
+    {
+      "label": "字典",
+      "className": "",
+      "value": "dictionary"
+    },
+    {
+      "label": "依赖关系",
+      "className": "",
+      "value": "related"
+    },
+    {
+      "label": "数据选择",
+      "className": "",
+      "value": "chosendata"
+    },
+    {
+      "label": "数字和浮点",
+      "className": "",
+      "value": "number"
+    },
+    {
+      "label": "金额",
+      "className": "",
+      "value": "money"
+    },
+    {
+      "label": "上传",
+      "className": "",
+      "value": "upload"
+    },
+    {
+      "label": "部门、人员、角色",
+      "className": "",
+      "value": "department"
+    },
+    {
+      "label": "自动编码",
+      "className": "",
+      "value": "autocode"
+    },
+
+  ]
+}

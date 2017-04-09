@@ -1,0 +1,205 @@
+.select-document {
+  height: 30px;
+  font-size: 12px;
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  border: 1px solid #dedede;
+  .select-content {
+    height:100%;
+    cursor: pointer;
+    overflow: hidden;
+  }
+  .select-input {
+    color: #444;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    position: relative;
+    background-color: white;
+    i{
+      top:0;
+      right: 0;
+      width: 25px;
+      height: 100%;
+      display: flex;
+      color: #aeb0bb;
+      font-size: 20px;
+      position: absolute;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+  select{
+    display: none;
+  }
+  .select-multiple-container{
+    ul{
+      display: flex;
+      flex-wrap:wrap;
+      line-height: 20px;
+      padding-bottom: 3px;
+    }
+    li{
+      padding-top: 3px;
+      padding-left: 2px;
+    }
+    span{
+      position: relative;
+      padding: 3px 0 3px 3px;
+      border: 1px solid #aaa;
+      max-width: 100%;
+      border-radius: 3px;
+      background-color: #eeeeee;
+      background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(20%, #f4f4f4), color-stop(50%, #f0f0f0), color-stop(52%, #e8e8e8), color-stop(100%, #eeeeee));
+      background-image: -webkit-linear-gradient(#f4f4f4 20%, #f0f0f0 50%, #e8e8e8 52%, #eeeeee 100%);
+      background-image: -moz-linear-gradient(#f4f4f4 20%, #f0f0f0 50%, #e8e8e8 52%, #eeeeee 100%);
+      background-image: -o-linear-gradient(#f4f4f4 20%, #f0f0f0 50%, #e8e8e8 52%, #eeeeee 100%);
+      background-image: linear-gradient(#f4f4f4 20%, #f0f0f0 50%, #e8e8e8 52%, #eeeeee 100%);
+      background-size: 100% 19px;
+      background-repeat: repeat-x;
+      background-clip: padding-box;
+      box-shadow: 0 0 2px white inset, 0 1px 0 rgba(0, 0, 0, 0.05);
+      color: #333;
+      line-height: 13px;
+      cursor: default;
+    }
+    i{
+      cursor: pointer;
+      padding: 3px;
+      font-size: 12px;
+      vertical-align: middle;
+      &:hover{
+        color:red;
+      }
+    }
+  }
+
+}
+
+.select-list-document{
+  position: absolute;
+  z-index: 1000;
+  background-color: #fff;
+  border:solid 1px #eaeaea;
+  border-top:none;
+  box-shadow: 0 2px 1px 1px whitesmoke;
+  &.search{
+    //min-width: 100px;
+    padding-top: 40px;
+  }
+  .select-main{
+    overflow: auto;
+    max-height: 300px;
+    label{
+      width:100%;
+      display: inline-block;
+    }
+
+    //表格右侧内容X轴滚动条默认底色颜色
+    &::-webkit-scrollbar-track{
+      background-color:#fff;
+      border-radius: 10px;
+    }
+    //表格右侧内容X轴滚动条鼠标初始化颜色
+    &::-webkit-scrollbar-thumb{
+      background-color: rgba(0, 0, 0, 0.1);
+      border-radius: 10px;
+    }
+    //表格右侧内容X轴滚动条鼠标划过颜色
+    &::-webkit-scrollbar-thumb:hover {
+      background-color:#86868b;
+      border-radius: 10px;
+    }
+    //表格右侧内容X轴滚动条鼠标点击颜色
+    &::-webkit-scrollbar-thumb:active {
+      background-color: #86868b;
+      border-radius: 10px;
+    }
+    //表格右侧内容X轴滚动条高度
+    &::-webkit-scrollbar{
+      height:10px;
+      width:8px;
+    }
+  }
+
+  li{
+    font-size: 14px;
+    &.disabled{
+      color:lightgrey;
+      cursor: not-allowed;
+      .textNoSelect();
+      >label{
+        pointer-events: none;
+      }
+      &:hover{
+        color:lightgrey;
+        background: transparent;
+      }
+    }
+  }
+  .option {
+    color:#575e69;
+    padding-left: 5px;
+    > label {
+      cursor: pointer;
+      padding: 4px 0;
+      .textAuto();
+    }
+    &:hover {
+      color: #fff;
+      background-color: gray;
+    }
+  }
+  .optgroup {
+    > label {
+      font-weight: 700;
+      padding-left: 5px;
+      pointer-events: none;
+    }
+    .option {
+      padding-left: 15px;
+    }
+  }
+  .option.select-option {
+    @startColor:#3875d7;
+    @endColor:#2a62bc;
+    background-color: @startColor;
+    background-image: -webkit-gradient(linear, 50% 0, 50% 100%, color-stop(20%, @startColor), color-stop(90%, @endColor));
+    background-image: -webkit-linear-gradient(@startColor 20%, @endColor 90%);
+    background-image: -moz-linear-gradient(@startColor 20%, @endColor 90%);
+    background-image: -o-linear-gradient(@startColor 20%, @endColor 90%);
+    background-image: linear-gradient(@startColor 20%, @endColor 90%);
+    color: #fff
+  }
+
+  //搜索框
+  .select-search{
+    top:0;
+    left:0;
+    width:100%;
+    padding: 5px;
+    position: absolute;
+    &:after{
+      .iconfont;
+      content:'\e622';
+      display: inline-block;
+      position: absolute;
+      color: #336ece;
+      top: 11px;
+      right: 10px;
+    }
+  }
+  .select-search-main{
+    height:28px;
+    width:100%;
+    font-size: 12px;
+    padding-right: 25px;
+    border:solid 1px #789cd6;
+    &:focus{
+      border-color: #789cd6;
+      box-shadow: 1px 0 2px #789cd6;
+    }
+  }
+
+}

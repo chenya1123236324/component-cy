@@ -1,0 +1,119 @@
+//角色权限--设置权限弹框
+.dialog-perul{
+  @hFont-size:16px;
+  @cFont-size:14px;
+  padding-left: 10px;
+
+  dl{
+    width:100%;
+    margin-bottom: 15px;
+    input{
+      width:@cFont-size;
+      height:@cFont-size;
+      margin-right: 10px;
+      vertical-align: middle;
+    }
+    //模块表头
+    dd{
+      margin-left: 0px;
+      padding:5px 10px;
+      background-color: #F6F6F6;
+      border-bottom: 1px solid #E5E9EE;
+      display: flex;
+      justify-content: space-between;
+      .rolePerModule{
+        font-size: @hFont-size;
+      }
+    }
+    //模块下的菜单
+    dt{
+      &:nth-last-child(1){
+        border-bottom: none;
+      }
+      padding:8px 10px;
+      border-bottom: 1px dotted gray;
+      display: flex;
+
+      //菜单
+      .rolePerMenu{
+        width:14%;
+        div{
+          text-align: right;
+        }
+
+      }
+
+      //右侧内容
+      .rolePerCont{
+        margin-left: 3%;
+        width:85%;
+        display: flex;
+        flex-wrap: wrap;
+        li{
+          width:25%;
+          //margin-bottom: 5px;
+          span{
+            vertical-align: middle;
+          }
+        }
+      }
+    }
+  }
+
+}
+
+.template-left .single-menu{
+  height:500px;
+}
+.template-right #permissionForm{
+  margin-top: 10px;
+  height:500px;
+  overflow: auto;
+}
+
+//角色授权多个用户列表样式
+.roleAuthorizationUser{
+  width:100%;
+  li{
+    width:100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding:8px 0;
+
+    >span{
+      vertical-align: middle;
+      text-align: center;
+      input{
+        width:1.4rem;
+        height:1.4rem;
+        cursor: pointer;
+      }
+      i{
+        cursor: pointer;
+        display: inline-block;
+        padding:0 5px;
+      }
+      &:nth-child(2){
+        flex:2;
+      }
+      &:nth-child(1){
+        flex:1;
+      }
+      &:nth-child(3){
+        flex:3;
+      }
+      &:nth-child(4){
+        flex:1;
+      }
+
+    }
+    &:nth-of-type(odd){
+      background-color: #F6F8FA;
+    }
+    &:hover{
+      background-color: #E9EFFB;
+    }
+
+  }
+}

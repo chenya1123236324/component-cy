@@ -1,0 +1,352 @@
+
+//首页菜单组件
+.home-menu{
+
+  >.homeMenu{
+    width: 100%;
+    height:50px;
+    cursor:pointer;
+    background:#2f3748;
+
+    //-----------------------公共样式封装----------------------------
+
+    //左侧中右边部分最小宽度
+    @right-min-width:96px;
+    //弹性盒子公共样式
+    .flexibleBox(){
+      text-align: center;
+      font-size: 18px;
+      vertical-align: middle;
+      display: box;
+      display: -moz-box;
+      display: -webkit-box;
+      display: -ms-box;
+      display: -o-box;
+      list-style-type: none;
+    }
+    //弹性盒子垂直居中
+    .verticalCentering(){
+      -webkit-box-pack: center;
+      -moz-box-pack: center;
+      -webkit-box-align: center;
+      -moz-box-align: center;
+      -ms-box-align: center;
+    }
+    //鼠标经过li背景颜色发生变化
+    .li-hover(){
+      &:hover{
+        background-color: #6a7382;
+      }
+    }
+    //鼠标点击li背景颜色发生变化
+    .li-active(){
+      &:active{
+        background-color:#00a79d;
+      }
+    }
+    //鼠标经过竖线背景颜色发生变化
+    .border-hover(){
+      &:hover{
+        border-right: 1px solid #6a7382;
+      }
+    }
+    //鼠标点击竖线背景颜色发生变化
+    .border-active(){
+      &:active{
+        border-right: 1px solid #00a79d;
+      }
+    }
+    //ul阴影样式
+    .ul-box-shadow(){
+      -moz-box-shadow: 3px 3px 1px #cbced1; /* 老的 Firefox */
+      box-shadow: 3px 3px 1px #cbced1;
+    }
+
+    //鼠标点击父级li时显示子级ul
+    .li-hover-ul(){
+      &:hover ul
+      {
+        display:list-item;
+      }
+    }
+    //-----------------------公共样式封装----------------------------
+    //头部导航
+    >.top-nav {
+      color: #ffffff;
+      width: 100%;
+      height: 50px;
+      position: relative;
+      top:0;
+      left:0;
+      //头部导航左侧
+      >.top-nav-left{
+        //弹性盒子公共样式
+        .flexibleBox();
+        //头部导航左侧中左侧部分ul
+        >.nav-left-left {
+          background:#394457;
+          height:50px;
+          position: relative;
+          //弹性盒子公共样式
+          .flexibleBox();
+          //头部导航左侧中左侧部分li
+          >li{
+            //弹性盒子公共样式
+            .flexibleBox();
+            //弹性盒子垂直居中
+            .verticalCentering();
+            min-width: 50px;
+            //鼠标经过li背景颜色发生变化
+            .li-hover();
+            //鼠标点击li背景颜色发生变化
+            .li-active();
+            //主菜单图标点击后展开的子级ul样式
+            >.main-menu-children {
+              display: list-item;
+              margin: 0;
+              position: absolute;
+              top:50px;
+              font-size: 12px;
+              padding:10px  20px 20px 20px;
+              //display: none;
+              list-style-type: none;
+              margin-left: -18px; //需要修改部分
+              z-index:999;
+              background:#ffffff;
+              text-align: justify;
+              -moz-column-gap: 8px;
+              -webkit-column-gap: 8px;
+              //ul阴影样式
+              .ul-box-shadow();
+              //主菜单图标点击后展开的子级ul样式下的li分组
+              >.group{
+                width:200px;
+                color:#535353;
+                //分组名称
+                >span{
+                  height:40px;
+                  line-height:40px;
+                  width:200px;
+                  display:inline-block;
+                  color:#b2b2b2;
+                  font-size:14px;
+                }
+                //主菜单图标点击后展开的子级ul样式下的li分组下的孙子节点ul
+                >ul{
+                  border-bottom: 1px solid #f2efef;
+                  //主菜单图标点击后展开的子级ul样式下的li分组下的孙子节点ul下的li
+                  >li{
+                    height:36px;
+                    line-height:36px;
+                    color:#6e6e6e;
+                    padding-left: 14px;
+                    //字体与图标之间的间距
+                    > a span{
+                      padding-left:4px;
+                      color:#5b5b5b;
+                    }
+                    //鼠标滑过后的样式
+                    &:hover{
+                      background-color: #f2f2f2;
+                    }
+                  }
+                }
+              }
+            }
+            //鼠标点击父级li时显示子级ul
+            .li-hover-ul();
+          }
+          //头部导航左侧中左侧部分第一个li
+          >li:nth-child(1){
+            border-right: 1px solid #444f65;
+          }
+          //头部导航左侧中左侧部分第二个li
+          >li:nth-child(2){
+            border-right: 1px solid #444f65;
+          }
+          //头部导航左侧中左侧部分三个li
+          >li:nth-child(3){
+            border-right: 1px solid #444f65;
+            //小房子字体图标不能居中解决方案
+            >a{
+              width:50px;
+              height:50px;
+              display:inline-block;
+              vertical-align: middle;
+              line-height:50px;
+              text-align: center;
+              .icon-index-copy{
+                color:#ffffff;
+              }
+            }
+          }
+        }
+        //头部导航左侧中右侧部分ul
+        >.nav-left-right {
+          position: relative;
+          //弹性盒子公共样式
+          .flexibleBox();
+          //头部导航左侧中右侧部分ul下的li
+          >li{
+            height:50px;
+            vertical-align: middle;
+            min-width: @right-min-width;
+            a{
+              color: #ffffff;
+            }
+            //头部导航左侧中右侧部分竖线
+            >.icon-line{
+              border-right: 1px solid #444f65;
+              min-width: @right-min-width;
+              display: inline-block;
+              margin-top: 16px;
+              //头部导航左侧中右侧部分下拉箭头图标
+              >.icon-xiala{
+                margin-left: 4px;
+              }
+              //鼠标经过竖线背景颜色发生变化
+              .border-hover();
+              //鼠标点击竖线背景颜色发生变化
+              .border-active();
+            }
+            //鼠标经过li背景颜色发生变化
+            .li-hover();
+            //鼠标点击li背景颜色发生变化
+            .li-active();
+            //去除a标签蓝色字体
+            >a{
+              color: #ffffff;
+            }
+            //头部导航左侧中右侧部分ul下的li中的子级ul
+            >.nav-left-right-children{
+              display: list-item;
+              margin: 0;
+              position: absolute;
+              top:50px;
+              z-index:999;
+              font-size: 12px;
+              display: none;
+              min-width:@right-min-width;
+              background:#ffffff;
+              color:#5b5b5b;
+              //ul阴影样式
+              .ul-box-shadow();
+              //头部导航左侧中右侧部分ul下的li中的子级ul下的li
+              >li{
+                height:40px;
+                line-height:40px;
+                //图标与字体间距
+                >a span{
+                  padding-left:4px;
+                  color:#5b5b5b;
+                }
+                //头部导航左侧中右侧部分点击子级li出现的效果
+                &:hover{
+                  border-top:1px solid #eaedf1;
+                  border-bottom:1px solid #eaedf1;
+                  background-color: #f5f5f5;
+                }
+              }
+            }
+            //鼠标点击父级li时显示子级ul
+            .li-hover-ul();
+          }
+        }
+      }
+
+      //头部导航右侧
+      >.top-nav-right{
+        height:50px;
+        position: absolute;
+        top:0;
+        right:0;
+        //弹性盒子公共样式
+        .flexibleBox();
+        //头部导航右侧部分ul
+        >.nav-right-right {
+          //弹性盒子公共样式
+          .flexibleBox();
+          //头部导航右侧部分ul下的li
+          >li{
+            position: relative;
+            height:50px;
+            vertical-align: middle;
+            min-width: @right-min-width;
+            //头部导航左侧中右侧部分竖线
+            >.icon-line{
+              border-right: 1px solid #444f65;
+              min-width: @right-min-width;
+              display: inline-block;
+              margin-top: 16px;
+              //头部导航左侧中右侧部分下拉箭头图标
+              >.icon-xiala{
+                margin-left: 4px;
+              }
+              //信息数量
+              > a .info-amount{
+                display:inline-block;
+                background-color: #fb9b00;
+                height: 16px;
+                width: 16px;
+                margin-left: 4px;
+                border-radius:50% 50%;
+              }
+              //鼠标经过竖线背景颜色发生变化
+              .border-hover();
+              //鼠标点击竖线背景颜色发生变化
+              .border-active();
+            }
+            //头像图片
+            >.menu-head{
+              display: inline-block;
+              width:40px;
+              height:40px;
+              margin-left:12px;
+              vertical-align:middle;
+            }
+            //鼠标经过li背景颜色发生变化
+            .li-hover();
+            //鼠标点击li背景颜色发生变化
+            .li-active();
+            //鼠标点击时跳转链接
+            >a{
+              color: #ffffff;
+              margin-top: 16px;
+              display: inline-block;
+            }
+            //头部导航右侧部分ul下的li的子级ul
+            >ul{
+              display: list-item;
+              margin: 0;
+              position: absolute;
+              top:50px;
+              z-index:999;
+              font-size: 12px;
+              display: none;
+              min-width:100%;
+              background:#ffffff;
+              color:#5b5b5b;
+              //ul阴影样式
+              .ul-box-shadow();
+              //头部导航右侧部分ul下的li的子级ul下的li
+              >li{
+                //height:180px;
+                >span{
+                  display: block;
+                  height: 30px;
+                  margin-top: 8px;
+                  >a{
+                    color:#000000;
+                  }
+                }
+              }
+            }
+            //鼠标点击父级li时显示子级ul
+            .li-hover-ul();
+          }
+        }
+      }
+    }
+  }
+
+}

@@ -1,0 +1,113 @@
+//模块信息展示页面样式
+.module-list{
+  width:100%;
+  height:100%;
+  >div{
+    padding:0 20px;
+  }
+
+  //页面顶部
+  .module-list-top{
+
+  }
+
+
+
+
+
+
+}
+
+//页面顶部公共样式
+.list-top{
+  width:100%;
+  height:60px;
+  position: relative;
+  background-color: #FCFFFF;
+  border-bottom: 1px solid lightgray;
+
+  >ul{
+    padding:10px 0;
+    width: 100%;
+    height:100%;
+    border-bottom:#d2d2d2;
+    display: flex;
+    justify-content: space-between;
+    li{
+      //display: inline-block;
+      height:100%;
+      &:nth-child(1){
+        >div{
+          height:100%;
+          line-height:40px;
+          vertical-align: middle;
+          span{
+            display: inline-block;
+            vertical-align: middle;
+            &.txt{
+              font-size: 18px;
+              font-weight: bold;
+            }
+            &.type{
+              line-height:18px;
+              padding:3px;
+              margin-left: 9px;
+              font-size: 12px;
+              background-color: #FB9B00;;
+              color: white;
+              border-radius: 5px;
+            }
+
+          }
+        }
+      }
+      &:nth-last-child(1){
+        >div{
+          margin-top: 3px;
+        }
+
+      }
+
+
+    }
+  }
+}
+
+//操作按钮
+.list-middle{
+  display: flex;
+  justify-content: space-between;
+  >div{
+    padding:14px 0;
+
+    &:nth-child(1){
+      margin-left: -20px;
+    }
+    &:nth-last-child(1){
+      text-align: right;
+    }
+
+  }
+}
+
+//grid列表
+.list-bottom{
+  //margin-bottom: 60px;
+}
+
+
+.unchangeable{
+  pointer-events: none;
+  input{
+    cursor: not-allowed;
+    background: #F6F6F6;
+    border-color: #E5EBF4;
+    &:after{
+      //color: white;
+    }
+    &:checked{
+      border-color: #E5EBF4;
+    }
+  }
+
+}

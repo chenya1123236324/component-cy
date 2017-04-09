@@ -1,0 +1,216 @@
+.list-tree{
+  .textNoSelect();
+  input[type="checkbox"]{
+    display: none;
+  }
+  .tree-parent .tree-node span{
+    margin: 0;
+  }
+  &.checkbox{
+    input[type="checkbox"]{
+      display: inline-block;
+    }
+    .tree-parent .tree-node span{
+      margin-left: 3px;
+    }
+  }
+}
+.tree-parent{
+  position: relative;
+  padding-left: 22px;
+  font-size: 12px;
+  vertical-align: middle;
+  font-family: Verdana,Arial,Helvetica,AppleGothic,sans-serif;
+  @bg:white;
+  @line-color: #dbdbdb;
+  input[type="checkbox"]{
+    @size:16px;
+    @color:transparent;
+    @checkedColor:#0c8620;
+    width: @size;
+    height: @size;
+    border:solid 1px #757171;
+    vertical-align: middle;
+    &:after{
+      font-size: 12px;
+    }
+    &:checked {
+      border: solid 1px #10cc2e;
+    }
+  }
+  .tree-text{
+    padding-left: 2px;
+  }
+  .tree-node{
+    position: relative;
+    aside{
+      padding: 6px 8px 6px 2px;
+      cursor: pointer;
+      margin-top: -2px;
+      position: relative;
+      display: inline-block;
+      vertical-align: middle;
+
+      >i{
+        @size:13px;
+        width: @size;
+        height: @size;
+        padding: 1.5px;
+        z-index: 2;
+        display: inline-block;
+        vertical-align: middle;
+        position: relative;
+      }
+      >b{
+        top: 14px;
+        width: 10px;
+        left: 10px;
+        z-index: 1;
+        position: absolute;
+        border-top: 1px @line-color dotted;
+      }
+
+      &.parent-icon{
+        >i{
+          @size:13px;
+          width: @size;
+          height: @size;
+          padding: 1.5px;
+          z-index: 2;
+          display: inline-block;
+          vertical-align: middle;
+          border: solid 1px gray;
+          position: relative;
+          background-color: @bg;
+          outline: @bg solid 2px;
+          &:after,&:before{
+            content:"";
+            display:block;
+            position: absolute;
+            border-color:gray;
+          }
+          &:after{
+            top: 5px;
+            left: 1px;
+            width:@size - 4px;
+            border-top:solid 1px;
+          }
+          &:before{
+            top: 1px;
+            left: 5px;
+            height:@size - 4px;
+            border-left:solid 1px;
+          }
+        }
+        >b{
+          width: 4px;
+          left: 18px;
+        }
+      }
+    }
+
+    span{
+      padding: 3px;
+      cursor: pointer;
+      margin-left: 3px;
+      border-radius: 3px;
+      &.focus{
+        background-color: #c9e2e0;
+      }
+    }
+
+    &:after{
+      top: 7px;
+      left: 8px;
+      height: 100%;
+      content: "";
+      display: block;
+      padding: 3px;
+      position: absolute;
+      border-left: 1px @line-color dotted;
+    }
+    &:last-child{
+      &:after{
+        display: none;
+      }
+    }
+    &:first-child{
+      &:after{
+        top: 3px;
+        padding: 5px;
+      }
+    }
+
+    &:only-child{
+      &:after{
+        top: -2px;
+        height: 5px;
+        display: block;
+      }
+    }
+
+    &.tree-isOpen{
+      >.tree-info>aside{
+        >i{
+          &:before{
+            display: none;
+          }
+        }
+      }
+    }
+
+  }
+
+
+  &.tree-root{
+    padding: 5px;
+    >.tree-node:first-child {
+      overflow: hidden;
+      &:after{
+        top: 12px;
+        padding: 0;
+      }
+      &+.tree-node{
+        &:after{
+          top: 1px;
+          padding: 5px;
+        }
+      }
+    }
+  }
+
+  &:last-child{
+    &:after{
+      display: none;
+    }
+  }
+
+}
+
+.tree-info{
+  height: 23px;
+  display:inline-block;
+  &:hover{
+    .tree-actions{
+      display: inline-flex;
+    }
+  }
+}
+
+.tree-actions{
+  display: none;
+  div{
+    color: #565557;
+    height:23px;
+    width:23px;
+    display: flex;
+    cursor: pointer;
+    margin-left: 5px;
+    align-items: center;
+    justify-content: center;
+    border: dotted 1px #615f5f;
+    i{
+      font-size: 14px;
+    }
+  }
+}
