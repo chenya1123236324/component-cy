@@ -38,7 +38,7 @@ define(function () {
                    list:[
                        {
                            isGroup:false,
-                           href:'admin/organization/organization',
+                           href: 'admin/button/button',
                            content:'按钮组件',
                            events:{
                                click:function () {
@@ -47,7 +47,7 @@ define(function () {
                        },
                        {
                            isGroup:false,
-                           href:'admin/rolePermission/list',
+                           href: 'admin/advancedQuery/advancedQuery',
                            content:'高级检索组件',
                            events:{
                                click:function () {
