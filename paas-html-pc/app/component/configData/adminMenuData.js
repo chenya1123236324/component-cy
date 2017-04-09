@@ -77,39 +77,38 @@ define(function () {
                },
                {
                    isGroup:true,
-                   label:'企业配置',
+                   label: '日期时间组件',
                    icon:'icon-company-info',
                    list:[
-                       /*{
+                       {
                         isGroup:false,//如果还有展开层,这里要写true,下同
-                        href:'',
-                        content:'企业参数',
+                           href: 'admin/date/date',
+                           content: '日期组件',
                         events:{
                         click:function () {
-
                         }
                         }
-                        },*/
+                       },
                        {
                            isGroup:false,
-                           href:'admin/enterpriseInformation/enterpriseInformation',
-                           content:'企业信息',
+                           href: 'admin/time/time',
+                           content: '时间组件',
                            events:{
                                click:function () {
 
                                }
                            }
                        },
-                       /*{
+                       {
                         isGroup:false,
-                        href:'',
-                        content:'内部信息',
+                           href: 'admin/datetime/datetime',
+                           content: '日期时间组件',
                         events:{
                         click:function () {
 
                         }
                         }
-                        },*/
+                       },
                        /*{
                         isGroup:false,
                         href:'',
