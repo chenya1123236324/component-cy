@@ -144,8 +144,6 @@ model('advancedQuery', function () {
                                                         events: {
                                                             click: function (event, receiveData) { //【必填项】按钮事件
                                                                 var formData = receiveData.getData();
-                                                                console.log(this, this.innerHTML, event);
-                                                                console.log(formData, "=====formData====");
                                                                 //新增弹框
                                                                 $packages('{PLUGINS}/modal/modal-dialog', function (dialog) {
                                                                     var a;
@@ -270,9 +268,10 @@ model('advancedQuery', function () {
                         defaultQueryTag: {
                             style: {   //【非必填项】设置最外层div的css样式，如果要写类似于margin-top的样式，需要这样写 'margin-top':'100px'
                                 display: "inline-block",
+                                'margin-top': "3px",
                             },
                             btnStyle: {  //【必填项】按钮内边距，可以控制按钮大小
-                                padding: '7px 14px',
+                                padding: '5px 14px',
                                 'margin-left': '10px'
                             },
                             list: [
@@ -283,7 +282,9 @@ model('advancedQuery', function () {
                                     align: 'center',//【必填项】文字居中
                                     events: {
                                         click: function (event) { //【必填项】按钮事件
-                                            console.log(this, this.innerHTML, event)
+                                            $packages('{PLUGINS}/hint/hint-message', function ($message) {
+                                                $message('潜在客户');
+                                            });
                                         }
                                     }
                                 }, {
@@ -293,7 +294,9 @@ model('advancedQuery', function () {
                                     align: 'center',//文字居中
                                     events: {
                                         click: function (event) {
-                                            console.log(this, this.innerHTML, event)
+                                            $packages('{PLUGINS}/hint/hint-message', function ($message) {
+                                                $message('意向客户');
+                                            });
                                         }
                                     }
                                 }, {
@@ -303,7 +306,9 @@ model('advancedQuery', function () {
                                     align: 'center', //文字居左
                                     events: {
                                         click: function (event) {
-                                            console.log(this, this.innerHTML, event)
+                                            $packages('{PLUGINS}/hint/hint-message', function ($message) {
+                                                $message('高级客户');
+                                            });
                                         }
                                     }
                                 }, {
@@ -313,7 +318,9 @@ model('advancedQuery', function () {
                                     align: 'center', //文字居右
                                     events: {
                                         click: function (event) {
-                                            console.log(this, this.innerHTML, event)
+                                            $packages('{PLUGINS}/hint/hint-message', function ($message) {
+                                                $message('VIP客户');
+                                            });
                                         }
                                     }
                                 }
@@ -332,10 +339,12 @@ model('advancedQuery', function () {
                             style: {   //【非必填项】设置最外层div的css样式，如果要写类似于margin-top的样式，需要这样写 'margin-top':'100px'
                                 display: "inline-block",
                                 float: "right",
+                                'margin-top': "3px",
                             },
                             btnStyle: {  //【必填项】按钮内边距，可以控制按钮大小
-                                padding: '6px 5px',
-                                'margin-left': '10px'
+                                padding: '4px 5px',
+                                'margin-left': '10px',
+                                'border-radius': "4px",
                             },
                             list: [
                                 {
@@ -345,15 +354,18 @@ model('advancedQuery', function () {
                                     align: 'right',//【必填项】图标居右
                                     events: {
                                         click: function (event) { //【必填项】按钮事件
-                                            console.log(this, this.innerHTML, event)
+                                            $packages('{PLUGINS}/hint/hint-message', function ($message) {
+                                                $message('全部高级客户');
+                                            });
                                         }
                                     },
                                     iconEvents: {
                                         click: function (event) {
                                             //停止事件冒泡
                                             event.stopPropagation();
-                                            console.log(this, this.innerHTML, event)
-                                            alert("您确定要删除这条信息吗?");
+                                            $packages('{PLUGINS}/hint/hint-message', function ($message) {
+                                                $message('您确定要删除这条信息吗?');
+                                            });
                                         }
                                     }
                                 }

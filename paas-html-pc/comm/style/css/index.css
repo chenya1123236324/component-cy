@@ -2128,6 +2128,7 @@ body > .admin-page {
   user-select: none;
   background-image: none;
   border: 1px solid transparent;
+  border-radius: 4px;
 }
 .btn-group-me .btn-teal {
   background-color: #26b7ae;
