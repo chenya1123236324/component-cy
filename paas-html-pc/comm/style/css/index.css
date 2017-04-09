@@ -2694,47 +2694,29 @@ body {
   /*早期浏览器*/
   user-select: none;
   position: absolute;
-  z-index: 1;
   height: 60px;
-  transition: 1s ease 0s;
+  width: 76%;
+  margin: 50px 20px;
 }
 .currentLocation > .locationLeft {
-  font-family: '微软雅黑';
-  font-size: 20px;
-  position: relative;
-  z-index: 1;
+  position: absolute;
+  z-index: 800;
+  top: 0;
+  left: 0;
   float: left;
   height: 60px;
-  cursor: pointer;
-}
-.currentLocation > .locationLeft .verticalLine {
-  width: 1px;
-  height: 36px;
-  background: #DFE2E6;
-  margin-left: 9px;
-  vertical-align: middle;
-  display: inline-block;
-  position: relative;
-  bottom: 2px;
-}
-.currentLocation > .locationLeft > span > #currentLocationName {
-  margin-left: 12px;
+  width: 13%;
 }
 .currentLocation > .locationLeft > span > a {
+  width: 68%;
   height: 60px;
-  color: #394457;
   line-height: 60px;
-  margin-left: 20px;
-}
-.currentLocation > .locationLeft > .arrow-icon {
-  margin-left: 18px;
-  font-size: 19px;
-  color: #9CA3AD;
-}
-.currentLocation > .locationLeft > .superior-icon {
-  margin-left: 6px;
-  font-size: 19px;
-  color: #A7B6D0;
+  display: inline-block;
+  margin-left: 12%;
+  font-size: 20px;
+  color: #ffffff;
+  font-weight: bold;
+  cursor: default;
 }
 .currentLocation > .locationLeft > i {
   color: #ffffff;
@@ -2742,66 +2724,65 @@ body {
   cursor: pointer;
 }
 .currentLocation .locationRight {
-  font-family: '微软雅黑' !important;
-  font-size: 20px;
+  position: absolute;
+  top: 0;
+  left: 13%;
   float: left;
   height: 60px;
+  width: 87%;
   opacity: 0;
-  width: 1000px;
 }
 .currentLocation .locationRight .locationFloat {
   float: left;
   height: 60px;
   width: 140px;
-  cursor: pointer;
 }
 .currentLocation .locationRight .locationFloat > span {
   float: left;
-  display: inline-block;
-  line-height: 24px;
-  margin: 17px 0;
-}
-.currentLocation .locationRight .locationFloat > span > p {
-  text-align: center;
-  color: #2F3748;
   width: 140px;
-  height: 20px;
-  line-height: 24px;
+  height: 40px;
+  display: inline-block;
+  margin: 11px 0;
+}
+.currentLocation .locationRight .locationFloat > span > a {
+  text-align: center;
+  width: 140px;
+  height: 38px;
+  line-height: 38px;
   display: inline-block;
   font-size: 16px;
+  color: #ffffff;
+  font-weight: bold;
+}
+.currentLocation .locationRight .locationFloat > span > a:hover,
+.currentLocation .locationRight .locationFloat > span > a:focus,
+.currentLocation .locationRight .locationFloat > span > a:active {
+  color: #edf0f6;
+  font-size: 20px;
 }
 .currentLocation .locationRight .locationFloat:last-child > span {
-  border-right: none!important;
+  border-right: none;
 }
 .currentLocation .slidingToLeft {
-  -webkit-animation: slidingToLeft 1s ease 0s  forwards;
-  display: none;
+  -webkit-animation: slidingToLeft 2s ease 0s forwards;
 }
 @-webkit-keyframes slidingToLeft {
   0% {
     opacity: 1;
-    -webkit-transform: translateX(0px);
-    transform: translateX(0px);
   }
   100% {
     opacity: 0;
-    -webkit-transform: translateX(-1500px);
-    transform: translateX(-1500px);
   }
 }
 .currentLocation .slidingToRight {
-  -webkit-animation: slidingToRight 1.2s ease 0s  forwards;
+  -webkit-animation: slidingToRight 2s ease 0s forwards;
 }
 @-webkit-keyframes slidingToRight {
   0% {
     opacity: 0;
-    -webkit-transform: translateX(-1500px);
-    transform: translateX(-1500px);
   }
   100% {
     opacity: 1;
-    -webkit-transform: translateX(0px);
-    transform: translateX(0px);
   }
 }
 .advanced-search .advancedSearch {

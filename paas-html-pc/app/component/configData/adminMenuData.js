@@ -57,8 +57,8 @@ define(function () {
                        },
                        {
                            isGroup:false,
-                           href:'admin/customPermission/list',
-                           content:'自定义权限',
+                           href: 'admin/currentLocation/currentLocation',
+                           content: '当前位置组件',
                            events:{
                                click:function () {
 

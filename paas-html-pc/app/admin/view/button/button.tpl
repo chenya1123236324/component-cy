@@ -1,17 +1,32 @@
-<div class="page-main-content">
-    <div class="admin-organization-layout-list">
-        <div class="organization-layout-list-right">
-            <div class="organization-list-settings">
-                <div class="organization-list-settings-left">
-                    <div class="organization-list-content">
-                        <span>按钮组件</span>
-                        <!--<span>菜单</span>-->
-                    </div>
+<!--<div class="page-main-content">-->
+<!--<div class="admin-organization-layout-list">-->
+<!--<div class="organization-layout-list-right">-->
+<!--<div class="organization-list-settings">-->
+<!--<div class="organization-list-settings-left">-->
+<!--<div class="organization-list-content">-->
+<!--<span>按钮组件</span>-->
+<!--&lt;!&ndash;<span>菜单</span>&ndash;&gt;-->
+<!--</div>-->
+<!--</div>-->
+<!--</div>-->
+<!--</div>-->
+<!--</div>-->
+<!--</div>-->
+
+<div class="module-list">
+    <!--模块信息头-->
+    <div class="list-top module-list-top">
+        <ul>
+            <li>
+                <div>
+                    <span class="txt">按钮组件</span>
                 </div>
-            </div>
-        </div>
+            </li>
+        </ul>
+    </div>
+    <div class="list-bottom module-list-bottom">
         <btn-group-me data="btnGroupMe"></btn-group-me>
-        <div id="highlighter_764215" style="padding:30px 0" class="syntaxhighlighter  js">
+        <div id="highlighter_764215" style="padding:30px 0;" class="syntaxhighlighter  js">
             <div class="toolbar"><span><a href="#" class="toolbar_item command_help help">?</a></span></div>
             <table border="0" cellpadding="0" cellspacing="0">
                 <tbody>
@@ -332,6 +347,7 @@
                 </tbody>
             </table>
         </div>
+
     </div>
 </div>
 
