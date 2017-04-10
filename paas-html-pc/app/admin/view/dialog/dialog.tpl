@@ -3,7 +3,7 @@
         <ul>
             <li>
                 <div>
-                    <span class="txt">dialog组件</span>
+                    <span class="txt">对话框组件</span>
                 </div>
             </li>
         </ul>

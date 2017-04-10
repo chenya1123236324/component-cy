@@ -84,6 +84,16 @@ define(function () {
 
                                }
                            }
+                       },
+                       {
+                           isGroup:false,
+                           href: 'admin/confirm/confirm',
+                           content: 'confirm组件',
+                           events:{
+                               click:function () {
+
+                               }
+                           }
                        }
                    ],
                    events:{
