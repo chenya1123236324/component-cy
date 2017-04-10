@@ -64,6 +64,16 @@ define(function () {
 
                                }
                            }
+                       },
+                       {
+                           isGroup:false,
+                           href: 'admin/valid/valid',
+                           content: '表单校验组件',
+                           events:{
+                               click:function () {
+
+                               }
+                           }
                        }
                    ],
                    events:{
