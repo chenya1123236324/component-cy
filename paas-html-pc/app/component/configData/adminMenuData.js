@@ -126,29 +126,39 @@ define(function () {
                },
                {
                    isGroup: true,
-                   label:'系统配置',
+                   label:'图标颜色组件',
                    icon:'icon-iconfontxitongshezhi',
                    list:[
                        {
                            isGroup:false,//如果还有展开层,这里要写true,下同
-                           href:'admin/sysConfig/sysDictionary',
-                           content:'系统字典',
+                           href:'admin/icons/icons',
+                           content:'图标组件',
                            events:{
                                click:function () {
 
                                }
                            }
                        },
-                       /*{
-                        isGroup:false,
-                        href:'',
-                        content:'国际化配置',
-                        events:{
-                        click:function () {
+                       {
+                           isGroup:false,//如果还有展开层,这里要写true,下同
+                           href:'admin/color/color',
+                           content:'颜色组件',
+                           events:{
+                               click:function () {
 
-                        }
-                        }
-                        }*/
+                               }
+                           }
+                       },
+                       {
+                           isGroup:false,//如果还有展开层,这里要写true,下同
+                           href:'admin/iconColor/iconColor',
+                           content:'图标颜色组件',
+                           events:{
+                               click:function () {
+
+                               }
+                           }
+                       },
                    ],
                    events:{
 
