@@ -94,6 +94,16 @@ define(function () {
 
                                }
                            }
+                       },
+                       {
+                           isGroup:false,
+                           href: 'admin/tab/tab',
+                           content: '选项卡组件',
+                           events:{
+                               click:function () {
+
+                               }
+                           }
                        }
                    ],
                    events:{

@@ -2081,6 +2081,7 @@ body > .admin-page {
 .tab-top-nav {
   display: inline-block;
   background-color: white;
+  width: 100%;
 }
 .tab-top-nav ul li {
   cursor: pointer;
