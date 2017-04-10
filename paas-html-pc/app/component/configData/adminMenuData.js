@@ -74,6 +74,16 @@ define(function () {
 
                                }
                            }
+                       },
+                       {
+                           isGroup:false,
+                           href: 'admin/dialog/dialog',
+                           content: 'dialog组件',
+                           events:{
+                               click:function () {
+
+                               }
+                           }
                        }
                    ],
                    events:{
