@@ -1,6 +1,4 @@
-/**
- * Created by 贝贝 on 2016/12/5.
- */
+
 define(function () {
 
    return function (menuServer) {
