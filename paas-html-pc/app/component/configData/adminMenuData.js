@@ -224,10 +224,11 @@ define(function () {
                                click:function () {
                                }
                            }
-                       },{
+                       },
+                       {
                            isGroup:false,
-                           href:'admin/menu/menu',
-                           content:'菜单设置',
+                           href:'admin/organization/organization',
+                           content:'组织名称组件',
                            events:{
                                click:function () {
 
@@ -235,111 +236,19 @@ define(function () {
                            }
                        },{
                            isGroup:false,
-                           href:'admin/viewFormula/viewFormula',
-                           content:'视图公式配置',
+                           href:'admin/person/person',
+                           content:'人员选择',
                            events:{
                                click:function () {
 
                                }
                            }
-                       },{
-                           isGroup:false,
-                           href:'admin/viewConditions/viewConditions',
-                           content:'视图条件配置',
-                           events:{
-                               click:function () {
-
-                               }
-                           }
-                       },{
-                           isGroup:false,
-                           href:'admin/operationConditions/operationConditions',
-                           content:'操作条件配置',
-                           events:{
-                               click:function () {
-
-                               }
-                           }
-                       },{
-                           isGroup:false,
-                           href:'admin/homeMark/homeMark',
-                           content:'首页标签',
-                           events:{
-                               click:function () {
-
-                               }
-                           }
-                       }
+                       },
                    ],
                    events:{
-
                    }
                },
-               {
-                   isGroup: true,
-                   label: '移动端配置',
-                   icon:'icon-yidongduan',
-                   list:[
-                       {
-                           isGroup:false,//如果还有展开层,这里要写true,下同
-                           href:'admin/viewSettings/viewSettings.html',
-                           content:'移动端视图设置',
-                           events:{
-                               click:function () {
-
-                               }
-                           }
-                       },
-                       {
-                           isGroup:false,//如果还有展开层,这里要写true,下同
-                           href:'admin/mobileMenu/mobileMenu.html',
-                           content:'移动端菜单',
-                           events:{
-                               click:function () {
-
-                               }
-                           }
-                       },
-                   ],
-                   events:{
-
-                   }
-               },
-               {
-                   isGroup: true,
-                   label: '系统日志',
-                   icon:'icon-5_2xitongrizhi',
-                   list: [
-                       {
-                           isGroup:false,
-                           href:'admin/sysLog/moduleDataLog',
-                           content:'模块数据日志',
-                           events:{
-                               click:function () {
-
-                               }
-                           }
-                       },
-                       {
-                           isGroup:false,
-                           href:'admin/sysLog/moduleConfOperationLog',
-                           content:'模块配置操作日志',
-                           events:{
-                               click:function () {
-
-                               }
-                           }
-                       },
-
-                   ],
-                   events:{
-
-                   }
-               }
            ]
        }
-
    }
-
-
 });
