@@ -66,7 +66,7 @@ $ https://github.com/chenya1123236324/component-cy.git
 ## 组件库截图
 
 <div  align="center">    
- <img src="https://chenya1123236324.github.io/component-cy/business/comm/style/less/component/homeMenu/component.jpg" width = "300" height = "200" alt="图片名称" align=center />
+ <img src="https://chenya1123236324.github.io/component-cy/business/comm/style/less/component/homeMenu/component.jpg"  alt="项目截图" align=center />
 </div>
 
 
