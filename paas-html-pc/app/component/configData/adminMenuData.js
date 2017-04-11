@@ -218,11 +218,10 @@ define(function () {
                        },
                        {
                            isGroup:false,
-                           href:'admin/moduleConfig/list',
-                           content:'模块配置管理',
+                           href:'admin/dashboard/dashboard',
+                           content:'dashboard组件',
                            events:{
                                click:function () {
-
                                }
                            }
                        },{
