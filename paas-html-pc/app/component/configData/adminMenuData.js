@@ -206,16 +206,15 @@ define(function () {
                },
                {
                    isGroup: true,
-                   label: '自定义配置',
+                   label: '个性化组件',
                    icon:'icon-setting',
                    list:[
                        {
                            isGroup:false,//如果还有展开层,这里要写true,下同
-                           href:'admin/module/list',
-                           content:'模块信息',
+                           href:'admin/homeMenu/homeMenu',
+                           content:'首页菜单组件',
                            events:{
                                click:function () {
-
                                }
                            }
                        },

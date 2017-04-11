@@ -545,6 +545,7 @@ body > .admin-page {
 }
 .layout-page-container .back-menu-container {
   width: 240px;
+  height: 1080px;
   background-color: transparent;
 }
 .layout-page-container .page-main-content {
@@ -562,9 +563,6 @@ body > .admin-page {
 }
 .admin-page button {
   color: #31394A;
-  height: 30px;
-  padding: 3px 15px;
-  margin-right: 15px;
   background-color: white;
   border: 1px solid #E5EBF4;
 }

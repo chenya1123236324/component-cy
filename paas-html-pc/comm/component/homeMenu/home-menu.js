@@ -173,7 +173,7 @@ homeMenu(function ($app, $appConfig) {
                 '</ul>';//nav-right-right
         }else{
             menuElement+= '<ul class="nav-right-right">' +
-                '<li><span class="icon-line"><i class="iconfont icon-xinxi"></i><a href="'+base.MessageLink+'"><span class="info-amount">'+base.MessageNumber+'</span></a></span></li>' +
+                '<li><span class="icon-line"><i class="iconfont icon-xinxi"></i><a href="'+base.MessageLink+'"><span style="display:none;"  class="info-amount">'+base.MessageNumber+'</span></a></span></li>' +
                 '<li><img class="menu-head" src="'+base.userHead+'"/><span class="icon-line">'+base.userName+'<i class="iconfont icon-xiala"></i></span>' +
                 '<ul>' +
                 '<li><span>'+base.userInformation+'</span></li>' +
