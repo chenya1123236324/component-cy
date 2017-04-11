@@ -63,6 +63,8 @@ $ https://github.com/chenya1123236324/component-cy.git
 在浏览器中打开： http://localhost:【端口号】/component-cy/business/index.html#!/admin/button/button.html
 ```
 
+ <img src="https://chenya1123236324.github.io/component-cy/business/comm/style/less/component/homeMenu/menu-head.png" width = "300" height = "200" alt="图片名称" align=center />
+
 
 ## 运行成功页面
 
