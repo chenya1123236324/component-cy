@@ -59,15 +59,14 @@
 
 
 ```bash
-$ git clone https://github.com/chenya1123236324/gulp-cy.git
-$ npm install
-$ gulp
+$ https://github.com/chenya1123236324/component-cy.git
+在浏览器中打开： http://localhost:【端口号】/cy/component-cy/business/index.html#!/admin/button/button.html
 ```
 
 
 ## 运行成功页面
 
- [点击查看](https://chenya1123236324.github.io/gulp-cy/src/index.html)
+ [点击查看](https://chenya1123236324.github.io/component-cy/business/index.html#!/admin/button/button.html)
 
 
 
