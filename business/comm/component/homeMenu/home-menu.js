@@ -66,7 +66,7 @@ homeMenu(function ($app, $appConfig) {
                     <!--头部导航左侧中左侧部分-->
                 '<ul class="nav-left-left">' +
                 '<li style="width:160px;"><a href="'+base.companyLink+'"><img src="'+base.companyLogo+'"/></a></li>' +
-                '<li style="width:80px;" class="menuConfigName">设置</li>' +
+                '<li style="width:80px;" class="menuConfigName">组件库</li>' +
                 '</ul>' +//nav-left-left
                 '</div>';//top-nav-left
         }else{
