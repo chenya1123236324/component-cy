@@ -60,7 +60,7 @@
 
 ```bash
 $ https://github.com/chenya1123236324/component-cy.git
-在浏览器中打开： http://localhost:【端口号】/cy/component-cy/business/index.html#!/admin/button/button.html
+在浏览器中打开： http://localhost:【端口号】/component-cy/business/index.html#!/admin/button/button.html
 ```
 
 
