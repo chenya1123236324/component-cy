@@ -166,8 +166,8 @@ homeMenu(function ($app, $appConfig) {
         if(isFrontPage==false){
             menuElement+= '<ul class="nav-right-right">' +
                 '<li><img class="menu-head" src="'+base.userHead+'"/><span class="icon-line">'+base.userName+'<i class="iconfont icon-xiala"></i></span>' +
-                '<ul>' +
-                '<li><span>'+base.userInformation+'</span></li>' +
+                '<ul style="display:none;">' +
+                '<li><span >'+base.userInformation+'</span></li>' +
                 '</ul>' +
                 '</li>' +
                 '</ul>';//nav-right-right
@@ -175,7 +175,7 @@ homeMenu(function ($app, $appConfig) {
             menuElement+= '<ul class="nav-right-right">' +
                 '<li><span class="icon-line"><i class="iconfont icon-xinxi"></i><a href="'+base.MessageLink+'"><span style="display:none;"  class="info-amount">'+base.MessageNumber+'</span></a></span></li>' +
                 '<li><img class="menu-head" src="'+base.userHead+'"/><span class="icon-line">'+base.userName+'<i class="iconfont icon-xiala"></i></span>' +
-                '<ul>' +
+                '<ul style="display:none;">' +
                 '<li><span>'+base.userInformation+'</span></li>' +
                 '</ul>' +
                 '</li>' +

@@ -13,7 +13,7 @@ model('homeMenu', function () {
             MessageNumber: '3',//【必填】消息数量，默认为0
             MessageLink: '/admin/button/button.html',//【必填】消息数量，默认为0
             userHead: './comm/style/less/component/homeMenu/menu-head.png',//【必填】用户头像
-            userName: '纪小蓝',//【必填】用户名称
+            userName: '陈亚',//【必填】用户名称
             userInformation: '用户信息',//【非必填】
             settingLink: '/admin/button/button.html',//【必填】设置链接
             style: {          //【非必填】预留功能

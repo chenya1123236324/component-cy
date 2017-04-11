@@ -3282,6 +3282,7 @@ body {
   height: 40px;
   margin-left: 12px;
   vertical-align: middle;
+  margin-top: -8px;
 }
 .home-menu > .homeMenu > .top-nav > .top-nav-right > .nav-right-right > li:hover {
   background-color: #6a7382;
