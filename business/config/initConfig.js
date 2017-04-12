@@ -45,7 +45,7 @@ config(function($app,$appConfig){
     $app.pageToggle('crm-pc');
 
     //默认的路由
-    $app.defaultRoute('home/custom/index');
+    $app.defaultRoute('admin/button/button.html');
 
     /*扩展配置*/
     $app.extendConfig({
